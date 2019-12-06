@@ -10,6 +10,8 @@
 }
 
 body {
+  color: $color-regular;
+  font-size: $fz-regular;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
@@ -21,8 +23,24 @@ img {
 }
 
 a,
-button {
+button,
+input,
+::placeholder {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  background: none;
+  border: none;
+  // outline: none;
   cursor: pointer;
+}
+
+::placeholder {
+  color: #C8C0DB;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .visually-hidden {
@@ -40,6 +58,7 @@ button {
 .container {
   @include push--auto;
   max-width: 1190px;
+  padding: 0 15px;
 }
 
 // Удаляем все анимации и переходы для людей, которые предпочитай их не использовать

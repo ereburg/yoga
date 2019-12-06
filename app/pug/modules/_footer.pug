@@ -1,40 +1,43 @@
 footer(class="footer")
-  div(class="container")
     div(class="footer-top")
-      form(class="footer__form form-action")
-        h3(class="form-action__title") Запишитесь на бесплатное пробное занятие
-        p(class="form-action__item")
-          label(class="form-action__label" for="action-name")
-          input(class="form-action__input" id="action-name" type="text", name="user-name" placeholder="Ваше имя")
-        p(class="form-action__item")
-          label(class="form-action__label" for="action-phone")
-          input(class="form-action__input" id="action-phone" type="tel", name="user-phone" placeholder="Ваш телефон")
-        button(class="form-action__button" type="submit") Оставить заявку
-      div(class="footer__info")
-        address(class="footer__address")
-          ul(class="info-list")
-            li(class="info-list__item")
-              p(class="info-list__text") Адрес:
-                br 
-                small(class="info-list__text-small") Московский проспект, 22
-            li(class="info-list__item")
-              p(class="info-list__text") Телефон:
-                br 
-                a(class="info-list__text-small" href="tel:+8 (812) 690-10-10") 8 (812) 690-10-10
-            li(class="info-list__item")
-              p(class="info-list__text") График работы:
-                br 
-                small(class="info-list__text-small") Пн-Вс с 11:00 до 21:00
-            li(class="info-list__item")
-              p(class="info-list__text") Email:
-                br 
-                a(class="info-list__text-small" href="mailto:yogaspb@gmail.com") yogaspb@gmail.com
-        ul(class="socials")
-          li: a(href="#") <svg class="socials__icon"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
-          li: a(href="#") <svg class="socials__icon"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
-          li: a(href="#") <svg class="socials__icon"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
+      section(class="action")
+        h2(class="visually-hidden") Запишитесь на бесплатное пробное занятие
+        div(class="container")
+          form(class="footer__form form-action") 
+            h3(class="form-action__title") Запишитесь на пробное занятие бесплатно
+            p(class="form-action__item")
+              label(class="form-action__label" for="action-name")
+                input(class="form-action__input" id="action-name" type="text", name="user-name" placeholder="Ваше имя")
+                span(class="form-action__border")
+            p(class="form-action__item")
+              label(class="form-action__label" for="action-phone")
+                input(class="form-action__input" id="action-phone" type="tel", name="user-phone" placeholder="Ваш телефон")
+                span(class="form-action__border")
+            button(class="form-action__button" type="submit") Оставить заявку
+      section(class="footer__info")
+        h2(class="visually-hidden") Контактная информация
+        div(class="container")
+          address(class="footer__address")
+            ul(class="info-list")
+              li(class="info-list__item")
+                p(class="info-list__text") Адрес:
+                  span(class="info-list__text-small") Московский проспект, 22
+              li(class="info-list__item")
+                p(class="info-list__text") Телефон:
+                  a(class="info-list__text-small" href="tel:+8 (812) 690-10-10") 8 (812) 690-10-10
+              li(class="info-list__item")
+                p(class="info-list__text") График работы:
+                  span(class="info-list__text-small") Пн-Вс с 11:00 до 21:00
+              li(class="info-list__item")
+                p(class="info-list__text") Email:
+                  a(class="info-list__text-small" href="mailto:yogaspb@gmail.com") yogaspb@gmail.com
+          ul(class="socials")
+            li: a(href="#") <svg class="socials__icon"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
+            li: a(href="#") <svg class="socials__icon"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
+            li: a(href="#") <svg class="socials__icon"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
     div(class="footer-bottom")
-      p(class="footer__company")
-        span(class="footer-bottom__text") Yogaspb.com
-      p(class="footer__copyright")
-        span(class="copyright-text") © 2018 Все права защищены
+      div(class="container")
+        p(class="footer__copyright")
+          span(class="copyright-text") © 2018 Все права защищены
+        p(class="footer__company")
+          span(class="footer-bottom__text") Yogaspb.com

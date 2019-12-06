@@ -7,6 +7,11 @@ header(class="header")
         +menuItem("#home", "Абонементы")
         +menuItem("#home", "О нас")
         +menuItem("#home", "Записаться")
+        div(class="mobile-socials")
+          ul(class="socials")
+            li: a(href="#") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
+            li: a(href="#") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
+            li: a(href="#") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
       button(class="nav__button button button-menu" type="button")
         span(class="button-menu__item")
         span(class="button-menu__item")
