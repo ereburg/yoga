@@ -1,0 +1,59 @@
+@mixin flexbox($justify: normal) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  position: $pos;
+  display: $display;
+  content: $content;
+}
+
+// выравнивание по центру
+@mixin push--auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+// медиа-выражения
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $size == medium {
+    @media (min-width: 740px) {
+      @content;
+    }
+  }
+
+  @else if $size == tablet-landscape-up {
+    @media (min-width: 945px) {
+      @content;
+    }
+  }
+
+  @else if $size == desktop-up {
+    @media (min-width: 1124px) {
+      @content;
+    }
+  }
+
+  @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+

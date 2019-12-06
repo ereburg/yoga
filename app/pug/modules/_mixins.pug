@@ -1,0 +1,6 @@
+mixin menuItem(link, name, current)
+  li(class="menu__item")
+    if(current)
+      span(class="menu__link menu__link--current")= name
+    else
+      a(class="menu__link" href= link)= name
