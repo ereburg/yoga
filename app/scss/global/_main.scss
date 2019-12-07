@@ -1,3 +1,26 @@
 .main {
-  padding: 70px 0;
+  // height: 100vh;
+  margin-top: -53px;
+}
+
+// .scroller {
+//   overflow-y: scroll;
+//   scroll-snap-type: y mandatory;
+// -webkit-overflow-scrolling: touch;
+
+//   & .scroller__item {
+//     min-height: 100vh;
+//     scroll-snap-align: start;
+//   }
+// }
+
+.scroller__item {
+  @include for-size(desktop-big) {
+    min-height: 100vh;
+  }
+}
+
+.section {
+  @include flexbox(center);
+  flex-direction: column;
 }

@@ -56,8 +56,8 @@
     }
   }
 
-  @else if $size == big-desktop {
-    @media (min-width: 1800px) {
+  @else if $size == desktop-big {
+    @media (min-width: 1200px) {
       @content;
     }
   }

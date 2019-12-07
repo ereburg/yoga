@@ -1,17 +1,17 @@
 footer(class="footer")
   div(class="footer-top")
     div(class="footer-top__container")
-      section(class="action")
+      section(class="action" id="action")
         h2(class="visually-hidden") Запишитесь на бесплатное пробное занятие
-        form(class="footer__form form-action") 
+        form(class="footer__form form-action" method="GET") 
           h3(class="form-action__title") Запишитесь на пробное занятие бесплатно
           p(class="form-action__item")
             label(class="form-action__label" for="action-name")
-              input(class="form-action__input" id="action-name" type="text", name="user-name" placeholder="Ваше имя")
+              input(class="form-action__input" id="action-name" type="text", name="user-name" placeholder="Ваше имя" required)
               span(class="form-action__border")
           p(class="form-action__item")
             label(class="form-action__label" for="action-phone")
-              input(class="form-action__input" id="action-phone" type="tel", name="user-phone" placeholder="Ваш телефон")
+              input(class="form-action__input" id="action-phone" type="tel", name="user-phone" placeholder="Ваш телефон" required)
               span(class="form-action__border")
           button(class="form-action__button" type="submit") Оставить заявку
       section(class="footer__info")
@@ -31,9 +31,9 @@ footer(class="footer")
               p(class="info-list__text") Email:
                 a(class="info-list__text-small" href="mailto:yogaspb@gmail.com") yogaspb@gmail.com
         ul(class="socials")
-          li: a(href="#") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
-          li: a(href="#") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
-          li: a(href="#") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
+          li: a(href="#" target="_blank") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
+          li: a(href="#" target="_blank") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
+          li: a(href="#" target="_blank") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
   
   div(class="footer-bottom")
     div(class="footer-content__container")

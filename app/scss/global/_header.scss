@@ -21,20 +21,37 @@
   font-size: $fz-medium - 4px;
 }
 
+.button-menu {
+  @include flexbox(center);
+}
+
 .button-menu__item {
   display: block;
   width: 20px;
   height: 1px;
   background: $color-regular;
 
+  @include for-size(tablet-portrait) {
+    width: 14.5px;
+  }
+
   &:not(:nth-child(3)) {
     width: 30px;
     margin-bottom: 5px;
+
+    @include for-size(tablet-portrait) {
+      width: 24px;
+    }
   }
 }
 
 .button-menu__text {
   display: none;
+
+  @include for-size(tablet-portrait) {
+    display: inline-flex;
+    margin-left: 12px;
+  }
 }
 
 .socials {

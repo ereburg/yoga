@@ -1,0 +1,123 @@
+
+
+.hero {
+  padding: 100px 15px 15px;
+  background: url("../images/desktop/bg-hero.png") center no-repeat;
+  background-size: cover;
+
+  @include for-size(tablet-portrait) {
+    padding: 113px 15px 75px;
+    background: url("../images/desktop/bg-hero.png") 50% 0% no-repeat;
+    background-size: cover;
+  }
+
+  @include for-size(desktop-big) {
+    padding: 213px 15px 75px;
+  }
+
+  .socials li:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.hero__content {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 15px;
+  justify-content: center;
+  max-width: 1190px;
+  margin: 0 auto 70px;
+  overflow: hidden;
+
+
+  @include for-size(desktop-big) {
+    justify-content: unset;
+    margin: 0 auto 130px;
+  }
+}
+
+.hero__text {
+  font-size: $fz-tagline-sm;
+  font-family: "Caveat", sans-serif;
+  text-align: center;
+
+  @include for-size(tablet-portrait) {
+    padding-left: 60px;
+    font-size: $fz-tagline-md;
+    text-align: left;
+  }
+
+  @include for-size(desktop-big) {
+    padding-left: 180px;
+    font-size: $fz-tagline-lg;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  margin-right: -0.26em;
+  color: $color-white;
+  font-size: $fz-company-sm;
+  line-height: 1;
+  letter-spacing: 0.26em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include for-size(tablet-portrait) {
+    font-size: $fz-company-md;
+  }
+
+  @include for-size(desktop-big) {
+    margin-right: -0.34em;
+    font-size: $fz-company-lg;
+    letter-spacing: 0.34em;
+    text-align: center;
+  }
+}
+
+.hero__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    padding: 9px 13px;
+    background: $color-accent;
+
+    @include for-size(tablet-portrait) {
+      padding: 15px 25px;
+    }
+  }
+
+  &-text {
+    max-width: 140px;
+    color: $color-accent;
+    font-size: $fz-small-md;
+
+    @include for-size(tablet-portrait) {
+      max-width: 200px;
+      font-size: $fz-regular-lg;
+    }
+  }
+}
+
+.hero__action-icon {
+  width: 9px;
+  height: 17px;
+  fill: $color-white;
+}
+
+.hero__bottom {
+  display: none;
+
+  @include for-size(tablet-portrait) {
+    @include flexbox(space-between);
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}

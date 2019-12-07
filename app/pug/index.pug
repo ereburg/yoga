@@ -5,5 +5,77 @@ block variables
     - var pageTitle= 'Yoga - почувствуй расслабление в своем теле'
 
 block content
-    main.main
-        h1(class="visually-hidden") Yoga - почувствуй расслабление в своем теле
+    main(class="main scroller")
+        section(class="hero scroller__item")
+            h2(class="visually-hidden") Yoga - почувствуй расслабление в своем теле
+            div(class="hero__content")
+                p(class="hero__text") Почувствуй расслабление в своем теле
+                h1(class="hero__title") Yoga
+                p(class="hero__action")
+                    a(class="hero__action-link" href="#action"): svg(class="hero__action-icon"): use(xlink:href="images/sprite.svg#sp-right")
+                    span(class="hero__action-text") Запишитесь на бесплатное пробное занятие
+            div(class="hero__bottom")
+                ul(class="socials")
+                    li: a(href="#" target="_blank"): svg(class="socials__icon socials__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+                    li: a(href="#" target="_blank"): svg(class="socials__icon socials__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+                    li: a(href="#" target="_blank"): svg(class="socials__icon socials__icon--fb"): use(xlink:href="images/sprite.svg#sp-fb")
+                p(class="hero__bottom-text") Санкт-Петербург
+
+        section(class="directions section scroller__item")
+            h2(class="section__title directions__title") Направления
+            div(class="section__content")
+                article(class="directions__item course")
+                    h3(class="visually-hidden") Заголовок статьи
+                    picture(class="course__image-container")
+                        img(class="course__image" src="../images/desktop/course-1.jpg", alt="Наш замечательный курс")
+                    div(class="course__container")
+                        div(class="course__description")
+                            h3(class="course__title") Хатха-йога
+                            p(class="course__timetable timetable")
+                                span(class="timetable__item span-block") Пн, Ср, Пт – с 12:00 до 15:00 
+                                span(class="timetable__item span-block") Вт, Чт – с 18:00 до 21:00 
+                            p(class="course__teacher teacher")
+                                span(class="teacher__position span-block") Инструктор
+                                span(class="teacher__name span-block") Емельянова Полина
+                        a(class="course__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
+
+                article(class="directions__item course")
+                    h3(class="visually-hidden") Заголовок статьи
+                    picture(class="course__image-container")
+                        img(class="course__image" src="../images/desktop/course-2.jpg", alt="Наш замечательный курс")
+                    div(class="course__container")
+                        div(class="course__description")
+                            h3(class="course__title") Ашатанга-йога
+                            p(class="course__timetable timetable")
+                                span(class="timetable__item span-block") Пн, Ср, Пт – с 11:00 до 14:00 
+                                span(class="timetable__item span-block") Вт, Чт – с 19:00 до 21:00 
+                            p(class="course__teacher teacher")
+                                span(class="teacher__position span-block") Инструктор
+                                span(class="teacher__name span-block") Емельянова Полина
+                        a(class="course__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
+
+                article(class="directions__item course")
+                    h3(class="visually-hidden") Заголовок статьи
+                    picture(class="course__image-container")
+                        img(class="course__image" src="../images/desktop/course-3.jpg", alt="Наш замечательный курс")
+                    div(class="course__container")
+                        div(class="course__description")
+                            h3(class="course__title") Кундалини-йога
+                            p(class="course__timetable timetable")
+                                span(class="timetable__item span-block") Пн, Ср, Пт – с 12:00 до 15:00 
+                                span(class="timetable__item span-block") Вт, Чт – с 18:00 до 21:00 
+                            p(class="course__teacher teacher")
+                                span(class="teacher__position span-block") Инструктор
+                                span(class="teacher__name span-block") Емельянова Полина
+                        a(class="course__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
+
+        section(class="products section scroller__item")
+            h2(class="section__title") Абонементы
+
+        section(class="team section scroller__item")
+            h2(class="section__title") Наша команда
+
+        section(class="testimonials section scroller__item")
+            h2(class="section__title") Отзывы
+
+    //- include modules/_footer

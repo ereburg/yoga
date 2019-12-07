@@ -108,7 +108,6 @@
   display: grid;
   grid-template-rows: auto;
   row-gap: 30px;
-  // @include flexbox(space-between);
   padding: 50px 35px 0;
   color: $color-white;
   background: $bg-dark;
@@ -118,8 +117,8 @@
   }
 
   @include for-size(desktop) {
-    padding: 0;
     max-width: 420px;
+    padding: 0;
     color: $color-regular;
     background: none;
   }
@@ -134,16 +133,11 @@
   }
 
   .footer__address {
-    // margin-bottom: 30px;
     font-style: normal;
 
     @include for-size(tablet-portrait) {
       max-width: 360px;
     }
-
-    // @include for-size(desktop) {
-    //   margin-bottom: 0;
-    // }
   }
 
   .info-list {
@@ -158,19 +152,11 @@
       grid-template-columns: 202px 1fr;
       column-gap: 32px;
     }
-    // @include flexbox(space-between);
-    // align-items: flex-start;
   }
 
   .info-list__item {
-    // min-width: 155px;
-
     &:not(:last-child) {
       margin-bottom: 20px;
-    }
-
-    &:nth-child(odd) {
-      // margin-right: 55px;
     }
   }
 
@@ -218,9 +204,8 @@
 
     @include for-size(phone-small) {
       display: grid;
-      grid-template-columns: fit-content(100%) auto;
       grid-template-rows: 1fr;
-      // column-gap: 32px;
+      grid-template-columns: fit-content(100%) auto;
       justify-content: unset;
     }
 
