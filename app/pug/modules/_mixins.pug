@@ -4,3 +4,13 @@ mixin menuItem(link, name, current)
       span(class="menu__link menu__link--current")= name
     else
       a(class="menu__link" href= link)= name
+
+mixin subscriptionItem(how, when, price)
+  div(class="subscription")
+    h4(class="subscription__title")= how
+    if (block)
+      block
+    else
+      p(class="subscription__time")= when
+    p(class="subscription__price")= price
+    button(class="subscription__button") Заказать абонемент

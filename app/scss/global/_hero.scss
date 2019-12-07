@@ -85,7 +85,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 15px;
-    padding: 9px 13px;
+    padding: 10px 13px;
     background: $color-accent;
 
     @include for-size(tablet-portrait) {
@@ -106,8 +106,8 @@
 }
 
 .hero__action-icon {
-  width: 9px;
-  height: 17px;
+  width: 13px;
+  height: 15px;
   fill: $color-white;
 }
 

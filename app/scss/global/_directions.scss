@@ -1,5 +1,14 @@
+.directions {
+  background: url("../images/phone/directions-decor.png") 0 20% no-repeat;
+  background-size: 220px;
+
+  @include for-size(tablet-portrait) {
+    background: none;
+  }
+}
+
 .section__content {
-  padding: 35px;
+  padding: 0 35px;
 
   @include for-size(tablet-portrait) {
     padding: 0 75px;
@@ -46,8 +55,8 @@
 }
 
 .course__container {
+  @include shadow;
   display: flex;
-
 }
 
 .course__description {
@@ -80,4 +89,13 @@
   width: 13px;
   height: 15px;
   fill: $color-white;
+}
+
+.button-more {
+  @include flexbox(center);
+  @include shadow;
+  width: 100%;
+  padding: 17px 0;
+  font-size: $fz-small-md;
+  background: $color-white;
 }

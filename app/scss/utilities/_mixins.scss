@@ -5,6 +5,10 @@
   justify-content: $justify;
 }
 
+@mixin shadow {
+  box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
+}
+
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   position: $pos;
   display: $display;

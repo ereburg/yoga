@@ -23,4 +23,5 @@
 .section {
   @include flexbox(center);
   flex-direction: column;
+  padding-bottom: 70px;
 }
