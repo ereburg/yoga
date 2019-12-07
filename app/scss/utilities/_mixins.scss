@@ -20,37 +20,43 @@
 
 // медиа-выражения
 @mixin for-size($size) {
-  @if $size == phone-only {
+  @if $size == phone-small {
+    @media (min-width: 430px) and (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $size == phone {
     @media (max-width: 599px) {
       @content;
     }
   }
 
-  @else if $size == tablet-portrait-up {
+  @else if $size == tablet-portrait {
     @media (min-width: 600px) {
       @content;
     }
   }
 
   @else if $size == medium {
-    @media (min-width: 740px) {
+    @media (min-width: 768px) {
       @content;
     }
   }
 
-  @else if $size == tablet-landscape-up {
-    @media (min-width: 945px) {
+  // @else if $size == tablet-landscape {
+  //   @media (min-width: 980px) {
+  //     @content;
+  //   }
+  // }
+
+  @else if $size == desktop {
+    @media (min-width: 980px) {
       @content;
     }
   }
 
-  @else if $size == desktop-up {
-    @media (min-width: 1124px) {
-      @content;
-    }
-  }
-
-  @else if $size == big-desktop-up {
+  @else if $size == big-desktop {
     @media (min-width: 1800px) {
       @content;
     }

@@ -1,19 +1,67 @@
 .footer {
-  .container {
-    padding-right: 35px;
-    padding-left: 35px;
+  @include for-size(tablet-portrait) {
+    .socials__icon {
+      &--vk {
+        width: 19px;
+        height: 14px;
+      }
+
+      &--tw {
+        width: 20px;
+        height: 14px;
+      }
+
+      &--fb {
+        width: 9px;
+        height: 14px;
+      }
+    }
+  }
+
+  .socials li:not(:last-child) {
+    margin-right: 11px;
   }
 }
 
+.footer-top {
+  @include for-size(desktop) {
+    padding: 70px 0;
+    background: url("../images/phone/bg-action.jpg") center no-repeat;
+    background-size: cover;
+  }
+
+  &__container {
+    @include for-size(desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 955px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+  }
+}
+
+.footer__form {
+  max-width: 415px;
+  margin: 0 auto;
+}
+
 .action {
-  padding: 70px 0;
+  padding: 70px 35px;
   background: url("../images/phone/bg-action.jpg") 22% 50% no-repeat;
+
+  @include for-size(desktop) {
+    order: 2;
+    padding: 0;
+    background: none;
+  }
 }
 
 .form-action__title {
   margin-bottom: 30px;
-  font-size: $fz-section - 10px;
   font-weight: bold;
+  font-size: $fz-section - 10px;
   line-height: 27px;
 }
 
@@ -22,8 +70,8 @@
 }
 
 .form-action__label {
-  display: block;
   position: relative;
+  display: block;
 }
 
 .form-action__input {
@@ -34,9 +82,9 @@
 
 .form-action__border {
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   display: block;
   width: 100%;
   height: 1px;
@@ -49,34 +97,80 @@
 
 .form-action__button {
   @include flexbox(center);
+  width: 100%;
   margin-top: 35px;
   padding: 24px 0;
-  width: 100%;
   color: $color-white;
   background: $color-accent;
 }
 
 .footer__info {
-  padding-top: 50px;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 30px;
+  // @include flexbox(space-between);
+  padding: 50px 35px 0;
   color: $color-white;
   background: $bg-dark;
 
+  @include for-size(tablet-portrait) {
+    padding: 75px 75px 0;
+  }
+
+  @include for-size(desktop) {
+    padding: 0;
+    max-width: 420px;
+    color: $color-regular;
+    background: none;
+  }
+
+  .info__container {
+    max-width: 460px;
+    margin: 0;
+
+    @include for-size(medium) {
+      max-width: 530px;
+    }
+  }
+
   .footer__address {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     font-style: normal;
+
+    @include for-size(tablet-portrait) {
+      max-width: 360px;
+    }
+
+    // @include for-size(desktop) {
+    //   margin-bottom: 0;
+    // }
   }
 
   .info-list {
-    @include flexbox;
-    // flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+
+    @include for-size(phone-small) {
+      grid-template-columns: 202px 1fr;
+      column-gap: 32px;
+    }
+
+    @include for-size(tablet-portrait) {
+      grid-template-columns: 202px 1fr;
+      column-gap: 32px;
+    }
+    // @include flexbox(space-between);
+    // align-items: flex-start;
   }
 
   .info-list__item {
-    min-width: 160px;
-    margin-right: 20px;
+    // min-width: 155px;
+
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &:nth-child(odd) {
+      // margin-right: 55px;
     }
   }
 
@@ -103,11 +197,61 @@
 }
 
 .footer-bottom {
-  padding: 40px 0 50px;
+  padding: 40px 0 25px;
   color: transparentize($color: $color-white, $amount: 0.5);
   background: $bg-dark;
+
+  @include for-size(tablet-portrait) {
+    padding: 30px 0 75px;
+  }
+
+  @include for-size(desktop) {
+    padding: 30px 0 25px;
+  }
+
+  .footer-content__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+
+    @include for-size(phone-small) {
+      display: grid;
+      grid-template-columns: fit-content(100%) auto;
+      grid-template-rows: 1fr;
+      // column-gap: 32px;
+      justify-content: unset;
+    }
+
+    @include for-size(tablet-portrait) {
+      justify-content: flex-start;
+      padding: 0 75px;
+    }
+
+    @include for-size(desktop) {
+      justify-content: space-between;
+      max-width: 955px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+  }
+}
+
+.footer__copyright,
+.footer__company {
+  margin-bottom: 25px;
+
+  @include for-size(tablet-portrait) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__copyright {
-  margin-bottom: 25px;
+  margin-right: 32px;
+
+  @include for-size(desktop) {
+    order: 2;
+    margin: 0;
+  }
 }
