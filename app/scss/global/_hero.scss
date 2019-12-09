@@ -1,18 +1,18 @@
 
 
 .hero {
-  padding: 100px 15px 15px;
+  padding: 100px 15px 70px;
   background: url("../images/desktop/bg-hero.png") center no-repeat;
   background-size: cover;
 
   @include for-size(tablet-portrait) {
-    padding: 113px 15px 75px;
-    background: url("../images/desktop/bg-hero.png") 50% 0% no-repeat;
-    background-size: cover;
+    padding: 113px 15px 90px;
   }
 
   @include for-size(desktop-big) {
     padding: 213px 15px 75px;
+    background: url("../images/desktop/bg-hero.png") 50% 0% no-repeat;
+    background-size: cover;
   }
 
   .socials li:not(:last-child) {
@@ -26,8 +26,12 @@
   row-gap: 15px;
   justify-content: center;
   max-width: 1190px;
-  margin: 0 auto 70px;
+  margin: 0 auto;
   overflow: hidden;
+
+  @include for-size(tablet-portrait) {
+    margin: 0 auto 60px;
+  }
 
 
   @include for-size(desktop-big) {

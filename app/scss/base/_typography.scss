@@ -1,6 +1,15 @@
 .section__title {
   margin-bottom: 40px;
   font-weight: bold;
+  font-size: $fz-section-sm;
+
+  @include for-size(tablet-portrait) {
+    font-size: $fz-section-md;
+  }
+
+  @include for-size(desktop-big) {
+    font-size: $fz-section-lg;
+  }
 }
 
 .span-block {
