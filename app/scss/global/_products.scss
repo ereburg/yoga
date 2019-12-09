@@ -1,8 +1,18 @@
 .products {
   background: url("../images/phone/bg-prices.png") center no-repeat,
-    url("../images/phone/subscription.png") bottom no-repeat;
-  background-position: center, center bottom -40px;
+    url("../images/phone/subscription.png") center bottom -40px no-repeat;
   background-size: auto, 310px;
+
+  @include for-size(tablet-portrait) {
+    background: url("../images/phone/bg-prices.png") center center -10% no-repeat,
+      url("../images/phone/subscription.png") right bottom -40px no-repeat;
+    background-size: cover, 310px;
+  }
+
+  @include for-size(desktop-big) {
+    background: url("../images/phone/bg-prices.png") 50% -500% no-repeat;
+    background-size: cover;
+  }
 }
 
 .products__title {
@@ -20,6 +30,7 @@
   margin-bottom: 35px;
 
   @include for-size(tablet-portrait) {
+    justify-content: center;
     margin-bottom: 45px;
   }
 
@@ -31,6 +42,12 @@
 .products__button {
   position: relative;
   color: $color-accent;
+
+  &:not(:last-child) {
+    @include for-size(tablet-portrait) {
+      margin-right: 30px;
+    }
+  }
 
   &--active::after {
     @include pseudo;
@@ -45,6 +62,60 @@
   grid-auto-rows: 200px;
   grid-template-columns: 250px;
   gap: 30px;
+
+  @include for-size(tablet-portrait) {
+    grid-auto-rows: auto;
+    grid-template-columns: minmax(130px, 180px) minmax(130px, 220px) minmax(130px, 180px);
+    padding: 0 15px;
+
+    .subscription {
+      align-self: flex-start;
+      padding: 35px 0;
+    }
+
+    .subscription__button {
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      visibility: hidden;
+      clip: rect(0 0 0 0);
+
+      &--active {
+        width: 100%;
+        height: 100%;
+        // margin: 0;
+        padding: 12px 0;
+        overflow: visible;
+        border: 0;
+        visibility: visible;
+        clip: rect(100% 100% 100% 100%);
+      }
+    }
+
+    .subscription:hover .subscription__button,
+    .subscription:nth-child(2) .subscription__button {
+      width: 100%;
+      height: 100%;
+      margin-top: 15px;
+      padding: 12px 0;
+      overflow: visible;
+      visibility: visible;
+      clip: rect(100% 100% 100% 100%);
+    }
+  }
+
+  @include for-size(desktop-big) {
+    grid-template-columns: minmax(230px, 265px) minmax(300px, 330px) minmax(230px, 265px);
+    gap: 40px;
+
+    .subscription {
+      width: 100%;
+      padding: 60px 0;
+    }
+  }
 }
 
 // Карточки абонементов
@@ -52,42 +123,58 @@
   @include shadow;
   @include flexbox(center);
   flex-direction: column;
-  min-width: 250px;
-  // padding: 30px;
   line-height: 1.5;
   text-align: center;
   background: $color-white;
-
-  // &:not(:last-child) {
-  //   margin-bottom: 30px;
-  // }
 }
 
 .subscription__title {
   font-weight: bold;
-  font-size: $fz-medium-md;
+  font-size: $fz-subscribtion-title-sm;
   text-transform: capitalize;
+
+  @include for-size(tablet-portrait) {
+    font-size: $fz-subscribtion-title-md;
+  }
 }
 
 .subscription__time {
   max-width: 135px;
   margin: 8px 0;
   color: $color-accent;
-  font-size: $fz-small-md;
+  font-size: $fz-subscribtion-time-sm;
+
+  @include for-size(desktop-big) {
+    max-width: 165px;
+    font-size: $fz-subscribtion-time-md;
+  }
 }
 
 .subscription__price {
-  margin-bottom: 15px;
   font-weight: bold;
-  font-size: $fz-subtitle-md;
+  font-size: $fz-subscribtion-price-sm;
+
+  @include for-size(tablet-portrait) {
+    font-size: $fz-subscribtion-price-md;
+  }
+
+  @include for-size(desktop-big) {
+    font-size: $fz-subscribtion-price-lg;
+  }
 }
 
 .subscription__button {
   width: 100%;
   max-width: 150px;
+  margin-top: 15px;
   padding: 12px 0;
   color: $color-white;
-  font-size: $fz-small-md;
+  font-size: $fz-subscribtion-time-sm;
   text-align: center;
   background: $color-regular;
+
+
+  @include for-size(desktop-big) {
+    font-size: $fz-subscribtion-time-md;
+  }
 }
