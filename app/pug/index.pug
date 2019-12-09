@@ -128,7 +128,6 @@ block content
 
                 button(class="slider__button slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
                 
-
         section(class="testimonials section scroller__item")
             h2(class="section__title") Отзывы
             div(class="slider testimonials-slider section__content")
@@ -137,23 +136,24 @@ block content
                         div(class="slider-content__item slider-content__item--cloned")
                         //- Контент последнего слайда
 
-                        div(class="slider-content__item ")
-                            div(class="slider-content__header testimonial")
-                                span(class="testimonial__quotes"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
+                        div(class="slider-content__item testimonial")
+                            div(class="slider-content__header")
+                                span(class="testimonial__quotes span-block"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
                                     
-                            
-                            div(class="slider-content__info")
+                            div(class="slider-content__info testimonial__message")
                                 p(class="slider-content__text") Хожу на йогу вечером, чтобы расслабиться после  тяжелого трудового дня. И после занятий наступает спокойствие! 
                                 p(class="slider-content__text") Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
-                            div(class="member__description")    
-                                div(class="member__container")
-                                    p(class="member__info")
-                                        span(class="member__position span-block") Инструктор
-                                        span(class="member__name span-block") Серёжа Попов
-                                    p(class="member__direction") Хатха-йога
-                                div(class="member__socials")
-                                    a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-                                    a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+                            
+                            div(class="testimonial__author author")    
+                                picture(class="author__image-container span-block")
+                                    img(class="author__image" src="images/desktop/testimonials-1.jpg", alt="", srcset="")
+                                div(class="author__info-container")
+                                    p(class="author__info")
+                                        span(class="author__name span-block") Мария Савина
+                                        time(class="author__date span-block" datetime="2018-05-16") 16 мая 2018
+                                    div(class="author__socials")
+                                        a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+                                        a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
 
                         div(class="slider-content__item slider-content__item--cloned")
                         //- Контент первого слайда
@@ -161,9 +161,9 @@ block content
                 div(class="slider-controls control")
                     button(class="control__button control__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
                     p(class="control__count")
-                        span 1 
-                        span /
-                        span 9
+                        span(class="control__current") 1 
+                        span / 
+                        span(class="control__total") 9
                     button(class="control__button control__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
               
     //- include modules/_footer

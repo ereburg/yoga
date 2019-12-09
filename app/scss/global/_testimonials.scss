@@ -1,4 +1,92 @@
+.testimonial {
+  @include shadow;
+  padding: 10px 15px 30px;
+  font-size: $fz-small-md;
+  background: $color-white;
+}
+
+.testimonial__message {
+  margin: 20px 0 30px;
+}
+
+
 .testimonial__icon {
   max-width: 28px;
   max-height: 25px;
+}
+
+.author {
+  @include flexbox;
+  flex-wrap: nowrap;
+  align-items: unset;
+}
+
+.author__info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.author__image {
+  max-width: 52px;
+  margin-right: 13px;
+}
+
+.author__name {
+  color: $color-accent;
+  font-size: $fz-regular-md;
+}
+
+.author__date {
+  line-height: 20px;
+}
+
+.author__socials {
+  display: flex;
+}
+
+.author__icon {
+  max-width: 14px;
+  max-height: 12px;
+
+  &--vk {
+    max-width: 17px;
+  }
+}
+
+.author__link {
+  display: block;
+  margin-right: 10px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.control__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  border: 1px solid $color-regular;
+
+  &--next {
+    background: $color-regular;
+
+    & .slider__icon {
+      fill: $color-white;
+    }
+  }
+}
+
+.control__count {
+  margin: 0 10px;
+  font-size: $fz-regular-md;
+}
+
+.control__total {
+  font-size: $fz-small-md;
 }
