@@ -9,9 +9,23 @@
   margin-bottom: 40px;
 }
 
+.products__content {
+  @include for-size(tablet-portrait) {
+    padding: 0;
+  }
+}
+
 .tablist-buttons {
   @include flexbox(space-between);
   margin-bottom: 35px;
+
+  @include for-size(tablet-portrait) {
+    margin-bottom: 45px;
+  }
+
+  @include for-size(desktop-big) {
+    margin-bottom: 50px;
+  }
 }
 
 .products__button {
@@ -26,22 +40,30 @@
   }
 }
 
+.products__item {
+  display: grid;
+  grid-auto-rows: 200px;
+  grid-template-columns: 250px;
+  gap: 30px;
+}
+
+// Карточки абонементов
 .subscription {
   @include shadow;
   @include flexbox(center);
   flex-direction: column;
   min-width: 250px;
-  padding: 30px;
+  // padding: 30px;
+  line-height: 1.5;
   text-align: center;
   background: $color-white;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
+  // &:not(:last-child) {
+  //   margin-bottom: 30px;
+  // }
 }
 
 .subscription__title {
-  margin-bottom: 15px;
   font-weight: bold;
   font-size: $fz-medium-md;
   text-transform: capitalize;
@@ -49,7 +71,7 @@
 
 .subscription__time {
   max-width: 135px;
-  margin-bottom: 15px;
+  margin: 8px 0;
   color: $color-accent;
   font-size: $fz-small-md;
 }
@@ -62,7 +84,8 @@
 
 .subscription__button {
   width: 100%;
-  padding: 14px 0;
+  max-width: 150px;
+  padding: 12px 0;
   color: $color-white;
   font-size: $fz-small-md;
   text-align: center;

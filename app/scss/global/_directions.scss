@@ -10,6 +10,10 @@
     background: url("../images/phone/bg-courses.png") center no-repeat;
     background-size: contain;
   }
+
+  @include for-size(desktop-big) {
+    background-size: 85%;
+  }
 }
 
 .section__content {
@@ -28,10 +32,10 @@
   @include for-size(medium) {
     display: grid;
     grid-template-columns: 250px 360px;
+    gap: 18px 22px;
     // grid-template-rows: repeat(auto-fill, max-content);
     justify-content: center;
     padding: 0;
-    gap: 18px 22px;
 
     & :first-child {
       grid-row: span 3;
@@ -53,16 +57,15 @@
       .course__container {
         position: relative;
         justify-content: flex-start;
-        
       }
 
       .course__link {
         position: absolute;
-        bottom: 25px;
         right: 25px;
+        bottom: 25px;
+        align-self: flex-end;
         min-width: 30px;
         padding: 5px 0;
-        align-self: flex-end;
       }
 
       .course__icon {
@@ -73,52 +76,40 @@
 
     .course__description {
       display: flex;
-      justify-content: center;
-      padding-right: 5px;
       flex-direction: column;
+      justify-content: center;
       padding: 0;
+      padding-right: 5px;
       padding-left: 20px;
       font-size: $fz-small-md;
     }
   }
 
   @include for-size(desktop-big) {
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 360px 525px;
     gap: 28px 34px;
 
+    // стилизация первого курса
     & :first-child {
-      grid-row: span 3;
       .course__image {
-        min-width: 400px;
+        max-width: 100%;
       }
     }
 
-    & :not(:first-child) {
-      flex-direction: row;
-    }
-
-    .course {
-      margin-bottom: 0;
-    }
-
+    // стилизация всех остальных курсов
     .directions__item:not(:first-child) {
       .course__image {
         max-width: 220px;
       }
 
-      .course__container {
-        position: relative;
-        justify-content: flex-start;
-        
+      .course__description {
+        padding-right: 34px;
+        padding-left: 34px;
       }
 
       .course__link {
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
-        min-width: 30px;
-        padding: 5px 0;
-        align-self: flex-end;
+        min-width: 45px;
+        padding: 8px 0;
       }
 
       .course__icon {
@@ -129,25 +120,13 @@
 
     .course__description {
       display: flex;
-      justify-content: center;
-      padding-right: 5px;
       flex-direction: column;
+      justify-content: center;
       padding: 0;
-      padding-left: 20px;
-      font-size: $fz-small-md;
+      padding-right: 5px;
+      padding-left: 46px;
+      font-size: $fz-small-lg;
     }
-  }
-}
-
-.directions__title {
-  margin-bottom: 40px;
-
-  @include for-size(tablet-portrait) {
-    margin-bottom: 45px;
-  }
-
-  @include for-size(desktop-big) {
-    margin-bottom: 65px;
   }
 }
 
@@ -178,6 +157,10 @@
 .course__title {
   font-weight: bold;
   font-size: $fz-subtitle-sm;
+
+  @include for-size(desktop-big) {
+    font-size: $fz-medium-md;
+  }
 }
 
 .course__timetable {
@@ -207,4 +190,13 @@
   padding: 17px 0;
   font-size: $fz-small-md;
   background: $color-white;
+
+  @include for-size(medium) {
+    margin-top: 18px;
+  }
+
+  @include for-size(desktop-big) {
+    margin-top: 30px;
+    font-size: $fz-small-lg;
+  }
 }

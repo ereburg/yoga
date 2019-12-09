@@ -4,10 +4,12 @@
   font-size: $fz-section-sm;
 
   @include for-size(tablet-portrait) {
+    margin-bottom: 45px;
     font-size: $fz-section-md;
   }
 
   @include for-size(desktop-big) {
+    margin-bottom: 65px;
     font-size: $fz-section-lg;
   }
 }
