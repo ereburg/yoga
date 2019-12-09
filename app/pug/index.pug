@@ -22,7 +22,7 @@ block content
                 p(class="hero__bottom-text") Санкт-Петербург
 
         section(class="directions section scroller__item")
-            h2(class="section__title directions__title") Направления
+            h2(class="section__title") Направления
 
             div(class="section__content")
                 article(class="directions__item course")
@@ -73,7 +73,7 @@ block content
                 button(class="directions__button button-more" id="add-courses") Смотреть больше
 
         section(class="products section scroller__item")
-            h2(class="section__title products__title") Абонементы
+            h2(class="section__title") Абонементы
 
             div(class="section__content")
 
@@ -92,12 +92,78 @@ block content
                             block when
                                 p(class="subscription__time") Посещение <br> с 17:00 до 21:00
 
-                
-
         section(class="team section scroller__item")
             h2(class="section__title") Наша команда
 
+            div(class="slider team-slider section__content")
+                button(class="slider__button slider__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+
+                div(class="slider-content")
+                    div(class="slider-track")
+                        div(class="slider-content__item slider-content__item--cloned")
+                        //- Контент последнего слайда
+
+                        div(class="slider-content__item ")
+                            div(class="slider-content__header member")
+                                picture(class="member__image-container")
+                                    img(class="member__image" src="images/desktop/team-1.jpg", alt="Наш замечательный преподаватель")
+                                div(class="member__description")    
+                                    div(class="member__container")
+                                        p(class="member__info")
+                                            span(class="member__position span-block") Инструктор
+                                            span(class="member__name span-block") Серёжа Попов
+                                        p(class="member__direction") Хатха-йога
+                                    div(class="member__socials")
+                                        a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+                                        a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+                            p(class="slider-content__experience") Опыт преподавания: 8 лет
+                            div(class="slider-content__info")
+                                p(class="slider-content__text") Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                                p(class="slider-content__text") Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
+                                p(class="slider-content__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+                                p(class="slider-content__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+
+                        div(class="slider-content__item slider-content__item--cloned")
+                        //- Контент первого слайда
+
+                button(class="slider__button slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+                
+
         section(class="testimonials section scroller__item")
             h2(class="section__title") Отзывы
+            div(class="slider testimonials-slider section__content")
+                div(class="slider-content")
+                    div(class="slider-track")
+                        div(class="slider-content__item slider-content__item--cloned")
+                        //- Контент последнего слайда
 
+                        div(class="slider-content__item ")
+                            div(class="slider-content__header testimonial")
+                                span(class="testimonial__quotes"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
+                                    
+                            
+                            div(class="slider-content__info")
+                                p(class="slider-content__text") Хожу на йогу вечером, чтобы расслабиться после  тяжелого трудового дня. И после занятий наступает спокойствие! 
+                                p(class="slider-content__text") Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
+                            div(class="member__description")    
+                                div(class="member__container")
+                                    p(class="member__info")
+                                        span(class="member__position span-block") Инструктор
+                                        span(class="member__name span-block") Серёжа Попов
+                                    p(class="member__direction") Хатха-йога
+                                div(class="member__socials")
+                                    a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+                                    a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+
+                        div(class="slider-content__item slider-content__item--cloned")
+                        //- Контент первого слайда
+
+                div(class="slider-controls control")
+                    button(class="control__button control__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                    p(class="control__count")
+                        span 1 
+                        span /
+                        span 9
+                    button(class="control__button control__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+              
     //- include modules/_footer

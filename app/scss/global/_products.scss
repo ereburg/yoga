@@ -1,8 +1,8 @@
 .products {
   background: url("../images/phone/bg-prices.png") center no-repeat,
-  url("../images/phone/subscription.png") bottom no-repeat;
-  background-size: auto, 310px;
+    url("../images/phone/subscription.png") bottom no-repeat;
   background-position: center, center bottom -40px;
+  background-size: auto, 310px;
 }
 
 .products__title {
@@ -32,8 +32,8 @@
   flex-direction: column;
   min-width: 250px;
   padding: 30px;
-  background: $color-white;
   text-align: center;
+  background: $color-white;
 
   &:not(:last-child) {
     margin-bottom: 30px;
@@ -42,8 +42,8 @@
 
 .subscription__title {
   margin-bottom: 15px;
-  font-size: $fz-medium-md;
   font-weight: bold;
+  font-size: $fz-medium-md;
   text-transform: capitalize;
 }
 
@@ -63,8 +63,8 @@
 .subscription__button {
   width: 100%;
   padding: 14px 0;
-  background: $color-regular;
   color: $color-white;
   font-size: $fz-small-md;
   text-align: center;
+  background: $color-regular;
 }

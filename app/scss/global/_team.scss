@@ -1,0 +1,114 @@
+.team {
+  font-size: $fz-small-md;
+  background: url("../images/phone/bg-team.png") left top -25px no-repeat;
+  background-size: contain;
+
+  .section__content {
+    padding: 0 15px;
+  }
+}
+
+.team__title {
+  margin-bottom: 40px;
+}
+
+.team-slider {
+  @include flexbox(center);
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.slider-content {
+  margin: 0 15px;
+}
+
+.slider__button {
+  position: relative;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 2px;
+  border: 1px solid $color-regular;
+
+  &--next {
+    right: 0;
+    background: $color-regular;
+
+    & .slider__icon {
+      fill: $color-white;
+    }
+  }
+}
+
+.slider__icon {
+  max-width: 10px;
+  max-height: 13px;
+  fill: $color-regular;
+}
+
+.member {
+  @include flexbox(center);
+  @include shadow;
+  flex-wrap: nowrap;
+  background: $color-white;
+}
+
+.member__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member__image {
+  max-width: 82px;
+}
+
+.member__description {
+  @include flexbox(space-between);
+  flex-grow: 1;
+  flex-wrap: nowrap;
+}
+
+.member__container {
+  padding-left: 15px;
+}
+
+.member__socials {
+  @include flexbox(space-between);
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.member__info {
+  margin-bottom: 12px;
+  color: $color-accent;
+}
+
+.member__link {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.member__icon {
+  &--vk {
+    max-width: 18px;
+    max-height: 12px;
+  }
+
+  &--tw {
+    max-width: 16px;
+    max-height: 12px;
+  }
+}
+
+.slider-content__experience {
+  margin: 25px 0 20px;
+  color: $color-accent;
+}
+
+.slider-content__text {
+  margin-bottom: 6px;
+  line-height: 15px;
+}
