@@ -14,3 +14,35 @@ mixin subscriptionItem(how, when, price)
       p(class="subscription__time")= when
     p(class="subscription__price")= price
     button(class="subscription__button") Заказать абонемент
+
+mixin memberTabItem(name, exp, active)
+  div(class="member-description__item tabcontent " + `${active}`)
+    h3(class="member-description__name")= name
+    p(class="member-description__experience")= exp
+    if block
+      block mem
+    else
+      p(class="member-description__text")= text
+      
+
+mixin memberContentItem(name, direction, image)
+  div(class="member tabbutton")
+    div(class="member__container")
+      picture(class="member__image-container")
+          img(class="member__image" src= `images/desktop/team-${image}.jpg` , alt="Серёжа Попов", srcset="")
+      div(class="member__about")
+          div(class="member__info")
+              p(class="member__position") Инструктор
+              p(class="member__name")= name
+              p(class="member__direction")= direction
+          div(class="member__socials")
+              a(class="member__social-link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="socials__icon socials__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+              a(class="member__social-link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="socials__icon socials__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+          p(class="member__link-container")
+              a(class="member__link" href="#") Смотреть
+    div(class="member__description--mobile")
+      p(class="member-description__experience") Опыт преподавания: 8 лет
+      p(class="member-description__text") Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+      p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
+      p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+      p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.

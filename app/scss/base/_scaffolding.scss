@@ -36,6 +36,10 @@ input,
   cursor: pointer;
 }
 
+picture {
+  display: block;
+}
+
 ::placeholder {
   color: #c8c0db;
 }
@@ -61,6 +65,40 @@ ul {
   max-width: 1190px;
   padding: 0 15px;
 }
+
+
+.section__content {
+  padding: 0 35px;
+
+  @include for-size(tablet-portrait) {
+    padding: 0 75px;
+  }
+
+  // @include for-size(desktop) {
+  //   padding: 0;
+  // }
+}
+
+.socials__icon {
+  max-width: 29px;
+  max-height: 21px;
+
+  &--vk {
+    width: 25px;
+    height: 19px;
+  }
+
+  &--tw {
+    width: 29px;
+    height: 20px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 21px;
+  }
+}
+
 
 // Удаляем все анимации и переходы для людей, которые предпочитай их не использовать
 @media (prefers-reduced-motion: reduce) {

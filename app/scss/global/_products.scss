@@ -10,7 +10,7 @@
   }
 
   @include for-size(desktop-big) {
-    background: url("../images/phone/bg-prices.png") 50% -500% no-repeat;
+    background: url("../images/phone/bg-prices.png") center center no-repeat, none;
     background-size: cover;
   }
 }

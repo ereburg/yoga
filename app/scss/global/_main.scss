@@ -1,22 +1,25 @@
 .main {
-  // height: 100vh;
   margin-top: -53px;
+
+  @include for-size(tablet-portrait) {
+    padding: 0;
+  }
 }
 
-// .scroller {
-//   overflow-y: scroll;
-//   scroll-snap-type: y mandatory;
-// -webkit-overflow-scrolling: touch;
+@include for-size(full) {
+  // .main {
+  //   height: 100vh;
+  // }
 
-//   & .scroller__item {
-//     min-height: 100vh;
-//     scroll-snap-align: start;
-//   }
-// }
+  // .scroller {
+  //   overflow-y: scroll;
+  //   scroll-snap-type: y mandatory;
+  //   -webkit-overflow-scrolling: touch;
+  // }
 
-.scroller__item {
-  @include for-size(desktop-big) {
+  .scroller__item {
     min-height: 100vh;
+    // scroll-snap-align: start;
   }
 }
 
@@ -24,4 +27,12 @@
   @include flexbox(center);
   flex-direction: column;
   padding-bottom: 70px;
+
+  @include for-size(tablet-portrait) {
+    padding-bottom: 120px;
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: 150px;
+  }
 }

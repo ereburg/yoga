@@ -7,24 +7,23 @@
   }
 
   @include for-size(medium) {
-    background: url("../images/phone/bg-courses.png") center no-repeat;
+    background: url("../images/phone/bg-courses.png") center -20px no-repeat;
     background-size: contain;
   }
 
-  @include for-size(desktop-big) {
+  @include for-size(desktop) {
+    background-position: center -20px;
     background-size: 85%;
   }
-}
 
-.section__content {
-  padding: 0 35px;
-
-  @include for-size(tablet-portrait) {
-    padding: 0 75px;
+  @include for-size(desktop-big) {
+    background-position: center -50px;
+    background-size: 1300px;
   }
 
-  @include for-size(desktop) {
-    padding: 0;
+  @include for-size(full) {
+    background-position: center center;
+    background-size: 1200px;
   }
 }
 

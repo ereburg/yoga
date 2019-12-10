@@ -1,22 +1,21 @@
-.footer {
-  @include for-size(tablet-portrait) {
-    .socials__icon {
-      &--vk {
-        width: 19px;
-        height: 14px;
-      }
+@include for-size(tablet-portrait) {
+  .socials__icon {
+    &--vk {
+      width: 17px;
+      height: 12px;
+    }
 
-      &--tw {
-        width: 20px;
-        height: 14px;
-      }
+    &--tw {
+      width: 16px;
+      height: 11px;
+    }
 
-      &--fb {
-        width: 9px;
-        height: 14px;
-      }
+    &--fb {
+      width: 7px;
+      height: 12px;
     }
   }
+
 
   .socials li:not(:last-child) {
     margin-right: 11px;

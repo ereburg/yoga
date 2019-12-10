@@ -83,16 +83,17 @@ block content
                     button(class="products__button tab-button" type="button" data-tab="3") 12 месяцев
 
                 div(class="tablist-contents")
-                    div(class="products__item tabcontent active" id="one-month" data-tab="1")
-                        +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "1 300 Р")
-                            block when
-                                p(class="subscription__time") Посещение <br> с 11:00 до 16:00
-                        +subscriptionItem("Безлимит", "Посещение не ограничено по времени", "2 800 Р")
-                        +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "2 000 Р")
-                            block when
-                                p(class="subscription__time") Посещение <br> с 17:00 до 21:00
+                    div(class="tabcontent tabcontent--active" id="one-month" data-tab="1")
+                        div(class="products__item")
+                            +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "1 300 Р")
+                                block when
+                                    p(class="subscription__time") Посещение <br> с 11:00 до 16:00
+                            +subscriptionItem("Безлимит", "Посещение не ограничено по времени", "2 800 Р")
+                            +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "2 000 Р")
+                                block when
+                                    p(class="subscription__time") Посещение <br> с 17:00 до 21:00
 
-        section(class="team section scroller__item")
+        //- section(class="team section scroller__item")
             h2(class="section__title") Наша команда
 
             div(class="slider team-slider section__content")
@@ -127,43 +128,63 @@ block content
                         //- Контент первого слайда
 
                 button(class="slider__button slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+
+        div(class="bg-container")
+            section(class="team section scroller__item")
+                h2(class="section__title") Наша команда
+
+                div(class="section__content team__content")
+                    div(class="slider slider--team tablist-button")
+                        +memberContentItem("Серёжа Попов", "Хатха-йога", "1")
+                        +memberContentItem("Серёжа Попов", "Хатха-йога", "2")
+                        +memberContentItem("Серёжа Попов", "Хатха-йога", "3")
+                        
+
+                    div(class="member-description tablist-content")
+                        +memberTabItem("Серёжа Попов", "Опыт преподавания: 8 лет", "tabcontent--active")
+                            block mem
+                                p(class="member-description__text") Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                                p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
+                                p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+                                p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+
+
+            section(class="testimonials section scroller__item")
+                h2(class="section__title") Отзывы
+                div(class="slider testimonials-slider section__content")
+                    div(class="slider-content")
+                        div(class="slider-track")
+                            div(class="slider-content__item slider-content__item--cloned")
+                            //- Контент последнего слайда
+
+                            div(class="slider-content__item testimonial")
+                                div(class="slider-content__header")
+                                    span(class="testimonial__quotes span-block"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
+                                        
+                                div(class="slider-content__info testimonial__message")
+                                    p(class="slider-content__text") Хожу на йогу вечером, чтобы расслабиться после  тяжелого трудового дня. И после занятий наступает спокойствие! 
+                                    p(class="slider-content__text") Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
+                                
+                                div(class="testimonial__author author")    
+                                    picture(class="author__image-container span-block")
+                                        img(class="author__image" src="images/desktop/testimonials-1.jpg", alt="", srcset="")
+                                    div(class="author__info-container")
+                                        p(class="author__info")
+                                            span(class="author__name span-block") Мария Савина
+                                            time(class="author__date span-block" datetime="2018-05-16") 16 мая 2018
+                                        div(class="author__socials")
+                                            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+                                            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+
+                            div(class="slider-content__item slider-content__item--cloned")
+                            //- Контент первого слайда
+
+                    //- div(class="slider-controls control")
+                        button(class="control__button control__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                        p(class="control__count")
+                            span(class="control__current") 1 
+                            span / 
+                            span(class="control__total") 9
+                        button(class="control__button control__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
                 
-        section(class="testimonials section scroller__item")
-            h2(class="section__title") Отзывы
-            div(class="slider testimonials-slider section__content")
-                div(class="slider-content")
-                    div(class="slider-track")
-                        div(class="slider-content__item slider-content__item--cloned")
-                        //- Контент последнего слайда
-
-                        div(class="slider-content__item testimonial")
-                            div(class="slider-content__header")
-                                span(class="testimonial__quotes span-block"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
-                                    
-                            div(class="slider-content__info testimonial__message")
-                                p(class="slider-content__text") Хожу на йогу вечером, чтобы расслабиться после  тяжелого трудового дня. И после занятий наступает спокойствие! 
-                                p(class="slider-content__text") Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
-                            
-                            div(class="testimonial__author author")    
-                                picture(class="author__image-container span-block")
-                                    img(class="author__image" src="images/desktop/testimonials-1.jpg", alt="", srcset="")
-                                div(class="author__info-container")
-                                    p(class="author__info")
-                                        span(class="author__name span-block") Мария Савина
-                                        time(class="author__date span-block" datetime="2018-05-16") 16 мая 2018
-                                    div(class="author__socials")
-                                        a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-                                        a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
-
-                        div(class="slider-content__item slider-content__item--cloned")
-                        //- Контент первого слайда
-
-                div(class="slider-controls control")
-                    button(class="control__button control__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
-                    p(class="control__count")
-                        span(class="control__current") 1 
-                        span / 
-                        span(class="control__total") 9
-                    button(class="control__button control__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
-              
     //- include modules/_footer

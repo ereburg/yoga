@@ -65,5 +65,11 @@
       @content;
     }
   }
+
+  @else if $size == full {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
 }
 
