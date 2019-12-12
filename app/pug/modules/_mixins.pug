@@ -49,3 +49,27 @@ mixin memberContentItem(name, direction, image, active)
         p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
         p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
         p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+
+mixin testimonialItem(name, date, datebin, image, active)
+  div(class="testimonial-item slider__item" + `${active}`)
+    div(class="testimonial__container")
+      div(class="testimonial__quotes-container")
+        span(class="testimonial__quotes span-block"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
+                            
+      div(class="testimonial__text-container")
+        if block
+          block text
+        else
+          p(class="testimonial__text") Хожу на йогу вечером, чтобы расслабиться после  тяжелого трудового дня. И после занятий наступает спокойствие! 
+          p(class="testimonial__text") Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
+
+      div(class="testimonial__author author")
+        picture(class="author__image-container")
+          img(class="author__image" src= `images/desktop/testimonials-${image}.jpg` , alt=name, srcset="")
+        div(class="author__info-container")
+          div
+            p(class="author__name")= name
+            time(class="author__date span-block" datetime=datebin)= date
+          div(class="author__socials")
+            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")

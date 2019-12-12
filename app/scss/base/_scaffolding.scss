@@ -74,9 +74,9 @@ ul {
     padding: 0 75px;
   }
 
-  // @include for-size(desktop) {
-  //   padding: 0;
-  // }
+  @include for-size(desktop-big) {
+    padding: 0;
+  }
 }
 
 .socials__icon {

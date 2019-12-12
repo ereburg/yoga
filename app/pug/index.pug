@@ -129,70 +129,45 @@ block content
 
                 button(class="slider__button slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
 
-        div(class="bg-container")
-            section(class="team section scroller__item")
-                h2(class="section__title") Наша команда
-
-                div(class="section__content team__content")
-                    div(class="slider")
-                        div(class="slider__wrapper slider__wrapper--team tablist-button")
-                            +memberContentItem("Серёжа Попов", "Хатха-йога", "1", " slider__item--active")
-                            +memberContentItem("Илья Анфилатов", "Флоу-йога", "2", "")
-                            +memberContentItem("Екатерина Стрельникова", "Йога в гамаках", "3", "")
-                        div(class="slider__controls slider__controls--full-width")
-                            button(class="slider__button slider__button--team slider__button--prev" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
-                            p(class="slider__counter slider-counter")
-                                span(class="slider-counter__current") 1 
-                                span / 
-                                span(class="slider-counter__total") 9
-                            button(class="slider__button slider__button--team slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
-                
-
-                    div(class="member-description tablist-content")
-                        +memberTabItem("Серёжа Попов", "Опыт преподавания: 8 лет", "tabcontent--active")
-                            block memDescr
-                                p(class="member-description__text") Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
-                                p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
-                                p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
-                                p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
-
-
-            section(class="testimonials section scroller__item")
-                h2(class="section__title") Отзывы
-                div(class="slider testimonials-slider section__content")
-                    div(class="slider-content")
-                        div(class="slider-track")
-                            div(class="slider-content__item slider-content__item--cloned")
-                            //- Контент последнего слайда
-
-                            div(class="slider-content__item testimonial")
-                                div(class="slider-content__header")
-                                    span(class="testimonial__quotes span-block"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")
-                                        
-                                div(class="slider-content__info testimonial__message")
-                                    p(class="slider-content__text") Хожу на йогу вечером, чтобы расслабиться после  тяжелого трудового дня. И после занятий наступает спокойствие! 
-                                    p(class="slider-content__text") Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
-                                
-                                div(class="testimonial__author author")    
-                                    picture(class="author__image-container span-block")
-                                        img(class="author__image" src="images/desktop/testimonials-1.jpg", alt="", srcset="")
-                                    div(class="author__info-container")
-                                        p(class="author__info")
-                                            span(class="author__name span-block") Мария Савина
-                                            time(class="author__date span-block" datetime="2018-05-16") 16 мая 2018
-                                        div(class="author__socials")
-                                            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-                                            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
-
-                            div(class="slider-content__item slider-content__item--cloned")
-                            //- Контент первого слайда
-
-                    //- div(class="slider-controls control")
-                        button(class="control__button control__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
-                        p(class="control__count")
-                            span(class="control__current") 1 
+        section(class="team section scroller__item")
+            h2(class="section__title") Наша команда
+            div(class="section__content team__content")
+                div(class="slider")
+                    div(class="slider__wrapper slider__wrapper--team tablist-button")
+                        +memberContentItem("Серёжа Попов", "Хатха-йога", "1", " slider__item--active")
+                        +memberContentItem("Илья Анфилатов", "Флоу-йога", "2", "")
+                        +memberContentItem("Марина Тарасова", "Йога в гамаках", "3", "")
+                    div(class="slider__controls slider__controls--full-width")
+                        button(class="slider__button slider__button--team slider__button--prev" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                        p(class="slider__counter slider-counter")
+                            span(class="slider-counter__current") 1 
                             span / 
-                            span(class="control__total") 9
-                        button(class="control__button control__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
-                
+                            span(class="slider-counter__total") 9
+                        button(class="slider__button slider__button--team slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+            
+                div(class="member-description tablist-content")
+                    +memberTabItem("Серёжа Попов", "Опыт преподавания: 8 лет", "tabcontent--active")
+                        block memDescr
+                            p(class="member-description__text") Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                            p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
+                            p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+                            p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+
+        section(class="testimonials section scroller__item")
+            h2(class="section__title") Отзывы
+            div(class="section__content")
+                div(class="slider")
+                    div(class="slider__wrapper slider__wrapper--testimonials")
+                        +testimonialItem("Мария Савина", "16 мая 2018", "2018-05-16", "1", " slider__item--active")
+                        +testimonialItem("Татьяна Сугатова", "18 мая 2018", "2018-05-18", "1", "")
+                        
+                    div(class="slider__controls slider__controls--desktop-fw")
+                        button(class="slider__button slider__button--testimonials slider__button--prev" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                        p(class="slider__counter slider-counter")
+                            span(class="slider-counter__current") 1 
+                            span / 
+                            span(class="slider-counter__total") 9
+                        button(class="slider__button slider__button--testimonials slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+
+            
     //- include modules/_footer

@@ -1,13 +1,21 @@
 .team {
+  position: relative;
   font-size: $fz-small-md;
   line-height: 15px;
   background: url("../images/phone/bg-team.png") left top -25px no-repeat;
   background-size: contain;
 
-  @include for-size(desktop-big) {
-    padding-bottom: 224px;
-    line-height: 20px;
-    background: none;
+  &::before {
+    @include for-size(desktop-big) {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1200px;
+      background: url("../images/phone/bg-team.png") left top no-repeat;
+      background-size: contain;
+
+      @include pseudo;
+    }
   }
 
   .section__title {
@@ -23,7 +31,13 @@
   .section__content {
     @include for-size(phone) {
       padding: 0 50px;
-    } 
+    }
+  }
+
+  @include for-size(desktop-big) {
+    padding-bottom: 224px;
+    line-height: 20px;
+    background: none;
   }
 }
 
@@ -33,102 +47,6 @@
     background-size: 1000px;
   }
 }
-
-// .team-slider {
-//   @include flexbox(center);
-//   flex-wrap: nowrap;
-//   align-items: flex-start;
-// }
-
-// .slider-content {
-//   margin: 0 15px;
-// }
-
-// .slider__button {
-//   position: relative;
-//   top: 25px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 8px 2px;
-//   border: 1px solid $color-regular;
-
-//   &--next {
-//     right: 0;
-//     background: $color-regular;
-
-//     & .slider__icon {
-//       fill: $color-white;
-//     }
-//   }
-// }
-
-// .slider__icon {
-//   max-width: 10px;
-//   max-height: 13px;
-//   fill: $color-regular;
-// }
-
-// .member {
-//   @include flexbox(center);
-//   @include shadow;
-//   flex-wrap: nowrap;
-//   background: $color-white;
-// }
-
-// .member__image {
-//   max-width: 82px;
-// }
-
-// .member__description {
-//   @include flexbox(space-between);
-//   flex-grow: 1;
-//   flex-wrap: nowrap;
-// }
-
-// .member__container {
-//   padding-left: 15px;
-// }
-
-// .member__socials {
-//   @include flexbox(space-between);
-//   flex-direction: column;
-//   padding: 0 20px;
-// }
-
-// .member__info {
-//   margin-bottom: 12px;
-//   color: $color-accent;
-// }
-
-// .member__link {
-//   &:not(:last-child) {
-//     margin-bottom: 10px;
-//   }
-// }
-
-// .member__icon {
-//   &--vk {
-//     max-width: 18px;
-//     max-height: 12px;
-//   }
-
-//   &--tw {
-//     max-width: 16px;
-//     max-height: 12px;
-//   }
-// }
-
-// .slider-content__experience {
-//   margin: 25px 0 20px;
-//   color: $color-accent;
-// }
-
-// .slider-content__text {
-//   margin-bottom: 6px;
-//   line-height: 15px;
-// }
-
 
 // NEW
 
@@ -145,7 +63,7 @@
   }
 
   @include for-size(desktop) {
-    grid-template-columns: repeat(2, minmax(min-content, 490px));
+    grid-template-columns: minmax(min-content, 400px) minmax(min-content, 480px);
     gap: 70px;
   }
 }
@@ -161,11 +79,12 @@
 }
 
 .member__container {
-  @include shadow;
   display: flex;
   align-items: center;
   // padding-right: 10px;
   background: $color-white;
+
+  @include shadow;
 
   @include for-size(tablet-portrait) {
     position: relative;
@@ -262,10 +181,11 @@
   display: block;
 
   &::after {
-    @include pseudo;
     bottom: 0;
     width: 100%;
     border-bottom: 1px solid $color-regular;
+
+    @include pseudo;
   }
 }
 // Tablist buttons
@@ -322,10 +242,6 @@
 .member-description__text {
   font-size: $fz-team-text-sm;
 
-  @include for-size(desktop) {
-    font-size: $fz-team-text-lg;
-  }
-
   &:not(:last-child) {
     margin-bottom: 10px;
 
@@ -336,6 +252,10 @@
     @include for-size(desktop) {
       margin-bottom: 20px;
     }
+  }
+
+  @include for-size(desktop) {
+    font-size: $fz-team-text-lg;
   }
 }
 
@@ -359,44 +279,55 @@
 
     &--active {
       display: block;
-  }
+    }
   }
 }
-
 
 
 .slider__controls {
   position: absolute;
   right: 0;
-  bottom: -60px;
+  bottom: -45px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  @include for-size(tablet-portrait) {
-    bottom: -45px;
-  }
+  &--desktop-fw {
+    right: 50%;
+    transform: translateX(50%);
 
-  @include for-size(desktop) {
-    bottom: -75px;
+    @include for-size(desktop) {
+      bottom: 50%;
+      justify-content: space-between;
+      width: 105%;
+
+      .slider__button {
+        transform: translateY(50%);
+
+        &--prev {
+          background: $color-regular;
+
+          .slider__icon {
+            fill: $color-white;
+          }
+        }
+
+        @include shadow;
+      }
+
+      .slider__counter {
+        display: none;
+      }
+    }
   }
 
   &--full-width {
-    $mobileWidth: 60px;
-    left: -($mobileWidth / 2);
-    right: -($mobileWidth / 2);
     top: 25px;
+    right: -($mobileWidth / 2);
+    left: -($mobileWidth / 2);
     // width: 100% + $mobileWidth;
     justify-content: space-between;
     max-height: 30px;
-
-    @include for-size(tablet-portrait) {
-      left: unset;
-      right: 0;
-      top: unset;
-      width: unset;
-      justify-content: center;
-    }
 
     .slider__counter {
       display: none;
@@ -405,6 +336,23 @@
         display: block;
       }
     }
+    $mobileWidth: 60px;
+
+    @include for-size(tablet-portrait) {
+      top: unset;
+      right: 0;
+      left: unset;
+      justify-content: center;
+      width: unset;
+    }
+  }
+
+  @include for-size(tablet-portrait) {
+    bottom: -45px;
+  }
+
+  @include for-size(desktop) {
+    bottom: -75px;
   }
 }
 
@@ -430,16 +378,6 @@
   // padding: 8px 2px;
   border: 1px solid $color-regular;
 
-  @include for-size(tablet-portrait) {
-    width: 30px;
-    height: 20px;
-  }
-
-  @include for-size(desktop) {
-    width: 45px;
-    height: 30px;
-  }
-
   &--team {
     // position: absolute;
     // top: 0;
@@ -451,7 +389,7 @@
       width: 30px;
       height: 20px;
     }
-  
+
     @include for-size(desktop) {
       width: 45px;
       height: 30px;
@@ -471,6 +409,15 @@
     display: block;
   }
 
+  @include for-size(tablet-portrait) {
+    width: 30px;
+    height: 20px;
+  }
+
+  @include for-size(desktop) {
+    width: 45px;
+    height: 30px;
+  }
 }
 
 .slider__counter {
@@ -484,6 +431,7 @@
 
 .slider-counter__total {
   font-size: $fz-team-text-sm;
+
   @include for-size(desktop) {
     font-size: $fz-team-text-lg;
   }
