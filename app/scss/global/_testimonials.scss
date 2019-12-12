@@ -58,15 +58,9 @@
 }
 
 .author {
-  @include flexbox;
-  flex-wrap: nowrap;
-  align-items: unset;
-}
-
-.author__info-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 15px;
 }
 
 .author__image-container {
@@ -76,7 +70,12 @@
 
 .author__image {
   max-width: 52px;
-  margin-right: 13px;
+}
+
+.author__info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .author__name {

@@ -292,6 +292,14 @@
   align-items: center;
   justify-content: center;
 
+  @include for-size(tablet-portrait) {
+    bottom: -45px;
+  }
+
+  @include for-size(desktop) {
+    bottom: -75px;
+  }
+
   &--desktop-fw {
     right: 50%;
     transform: translateX(50%);
@@ -336,7 +344,6 @@
         display: block;
       }
     }
-    $mobileWidth: 60px;
 
     @include for-size(tablet-portrait) {
       top: unset;
@@ -345,14 +352,6 @@
       justify-content: center;
       width: unset;
     }
-  }
-
-  @include for-size(tablet-portrait) {
-    bottom: -45px;
-  }
-
-  @include for-size(desktop) {
-    bottom: -75px;
   }
 }
 
