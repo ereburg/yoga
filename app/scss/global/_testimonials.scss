@@ -69,7 +69,8 @@
 }
 
 .author__image {
-  max-width: 52px;
+  max-width: $testimonialValue;
+  max-height: $testimonialValue;
 }
 
 .author__info-container {
