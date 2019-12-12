@@ -1,14 +1,11 @@
-# Yoga
+# Yoga !Work in progress!
 This is the main page of yoga-center in Saint-Petersburg. Clean and modern landing.
 This is a test project. It is based on my own gulp template for HTML development.
 
 ### Technologies
 
 Stack: JS, Pug and SCSS.
-Libs: Slick slider, lazy loading, jQuery.
-
-
-!Work is in progress.!
+Libs: lazy-loading.js, normalize.css.
 
 ### Links & references
 

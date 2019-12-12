@@ -5,6 +5,7 @@
   background-size: contain;
 
   @include for-size(desktop-big) {
+    padding-bottom: 224px;
     line-height: 20px;
     background: none;
   }
@@ -18,12 +19,18 @@
       margin-bottom: 120px;
     }
   }
+
+  .section__content {
+    @include for-size(phone) {
+      padding: 0 50px;
+    } 
+  }
 }
 
 .bg-container {
   @include for-size(desktop-big) {
     background: url("../images/phone/bg-team.png") left center no-repeat;
-    background-size: contain;
+    background-size: 1000px;
   }
 }
 
@@ -144,8 +151,6 @@
 }
 
 .member:not(:last-child) {
-  margin-bottom: 60px;
-
   @include for-size(tablet-portrait) {
     margin-bottom: 60px;
   }
@@ -322,7 +327,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 
     @include for-size(tablet-portrait) {
       margin-bottom: 15px;
@@ -339,5 +344,147 @@
 
   @include for-size(tablet-portrait) {
     display: none;
+  }
+}
+
+// Slider
+
+.slider {
+  position: relative;
+}
+
+.slider__item {
+  @include for-size(phone) {
+    display: none;
+
+    &--active {
+      display: block;
+  }
+  }
+}
+
+
+
+.slider__controls {
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include for-size(tablet-portrait) {
+    bottom: -45px;
+  }
+
+  @include for-size(desktop) {
+    bottom: -75px;
+  }
+
+  &--full-width {
+    $mobileWidth: 60px;
+    left: -($mobileWidth / 2);
+    right: -($mobileWidth / 2);
+    top: 25px;
+    // width: 100% + $mobileWidth;
+    justify-content: space-between;
+    max-height: 30px;
+
+    @include for-size(tablet-portrait) {
+      left: unset;
+      right: 0;
+      top: unset;
+      width: unset;
+      justify-content: center;
+    }
+
+    .slider__counter {
+      display: none;
+
+      @include for-size(tablet-portrait) {
+        display: block;
+      }
+    }
+  }
+}
+
+.slider__icon {
+  max-width: 10px;
+  max-height: 13px;
+  fill: $color-regular;
+
+  @include for-size(desktop) {
+    max-width: 13px;
+    max-height: 16px;
+  }
+}
+
+.slider__button {
+  // position: relative;
+  // top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 16px;
+  // padding: 8px 2px;
+  border: 1px solid $color-regular;
+
+  @include for-size(tablet-portrait) {
+    width: 30px;
+    height: 20px;
+  }
+
+  @include for-size(desktop) {
+    width: 45px;
+    height: 30px;
+  }
+
+  &--team {
+    // position: absolute;
+    // top: 0;
+    width: 16px;
+    height: 30px;
+
+    @include for-size(tablet-portrait) {
+      position: relative;
+      width: 30px;
+      height: 20px;
+    }
+  
+    @include for-size(desktop) {
+      width: 45px;
+      height: 30px;
+    }
+  }
+
+  &--next {
+    // right: 0;
+    background: $color-regular;
+
+    .slider__icon {
+      fill: $color-white;
+    }
+  }
+
+  .slider__icon {
+    display: block;
+  }
+
+}
+
+.slider__counter {
+  margin: 0 10px;
+  font-size: $fz-team-text-lg;
+
+  @include for-size(desktop) {
+    font-size: $fz-team-name-md;
+  }
+}
+
+.slider-counter__total {
+  font-size: $fz-team-text-sm;
+  @include for-size(desktop) {
+    font-size: $fz-team-text-lg;
   }
 }

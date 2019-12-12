@@ -134,15 +134,23 @@ block content
                 h2(class="section__title") Наша команда
 
                 div(class="section__content team__content")
-                    div(class="slider slider--team tablist-button")
-                        +memberContentItem("Серёжа Попов", "Хатха-йога", "1")
-                        +memberContentItem("Серёжа Попов", "Хатха-йога", "2")
-                        +memberContentItem("Серёжа Попов", "Хатха-йога", "3")
-                        
+                    div(class="slider")
+                        div(class="slider__wrapper slider__wrapper--team tablist-button")
+                            +memberContentItem("Серёжа Попов", "Хатха-йога", "1", " slider__item--active")
+                            +memberContentItem("Илья Анфилатов", "Флоу-йога", "2", "")
+                            +memberContentItem("Екатерина Стрельникова", "Йога в гамаках", "3", "")
+                        div(class="slider__controls slider__controls--full-width")
+                            button(class="slider__button slider__button--team slider__button--prev" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                            p(class="slider__counter slider-counter")
+                                span(class="slider-counter__current") 1 
+                                span / 
+                                span(class="slider-counter__total") 9
+                            button(class="slider__button slider__button--team slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+                
 
                     div(class="member-description tablist-content")
                         +memberTabItem("Серёжа Попов", "Опыт преподавания: 8 лет", "tabcontent--active")
-                            block mem
+                            block memDescr
                                 p(class="member-description__text") Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
                                 p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
                                 p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
