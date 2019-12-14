@@ -22,7 +22,6 @@
   }
 }
 
-
 .testimonial__container {
   @include shadow;
   padding: 10px 15px 30px;
@@ -59,6 +58,7 @@
 
 .author {
   display: grid;
+  grid-template-rows: 52px;
   grid-template-columns: 52px 1fr;
   gap: 15px;
 }
@@ -70,7 +70,6 @@
 
 .author__image {
   max-width: $testimonialValue;
-  max-height: $testimonialValue;
 }
 
 .author__info-container {
@@ -107,38 +106,3 @@
   margin-right: 10px;
 }
 
-
-// NEW
-
-
-// .control {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin-top: 30px;
-// }
-
-// .control__button {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 2px 10px;
-//   border: 1px solid $color-regular;
-
-//   &--next {
-//     background: $color-regular;
-
-//     & .slider__icon {
-//       fill: $color-white;
-//     }
-//   }
-// }
-
-// .control__count {
-//   margin: 0 10px;
-//   font-size: $fz-regular-md;
-// }
-
-// .control__total {
-//   font-size: $fz-small-md;
-// }
