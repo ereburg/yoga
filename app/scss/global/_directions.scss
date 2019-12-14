@@ -1,5 +1,8 @@
 .directions {
-  background: url("../images/phone/directions-decor.png") 0 20% no-repeat;
+  // background: url("../images/phone/directions-decor.png") 0 20% no-repeat;
+  background-image: image-set("../images/phone/directions-decor.png" 1x, "../images/phone/directions-decor-retina.png" 2x);
+  background-repeat: no-repeat;
+  background-position: 0 20%;
   background-size: 220px;
 
   @include for-size(tablet-portrait) {
@@ -7,7 +10,10 @@
   }
 
   @include for-size(medium) {
-    background: url("../images/phone/bg-courses.png") center -20px no-repeat;
+    // background: url("../images/phone/bg-courses.png") center -20px no-repeat;
+    background-image: image-set("../images/phone/bg-courses.png" 1x, "../images/tablet/bg-courses.png" 2x);
+    background-repeat: no-repeat;
+    background-position: center -20px;
     background-size: contain;
   }
 

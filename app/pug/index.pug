@@ -25,50 +25,9 @@ block content
             h2(class="section__title") Направления
 
             div(class="section__content directions__list")
-                article(class="directions__item course")
-                    h3(class="visually-hidden") Заголовок статьи
-                    picture(class="course__image-container")
-                        img(class="course__image" src="images/desktop/course-1.jpg", alt="Наш замечательный курс")
-                    div(class="course__container")
-                        div(class="course__description")
-                            h3(class="course__title") Хатха-йога
-                            p(class="course__timetable timetable")
-                                span(class="timetable__item span-block") Пн, Ср, Пт – с 12:00 до 15:00 
-                                span(class="timetable__item span-block") Вт, Чт – с 18:00 до 21:00 
-                            p(class="course__teacher teacher")
-                                span(class="teacher__position span-block") Инструктор
-                                span(class="teacher__name span-block") Емельянова Полина
-                        a(class="course__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
-
-                article(class="directions__item course")
-                    h3(class="visually-hidden") Заголовок статьи
-                    picture(class="course__image-container")
-                        img(class="course__image" src="images/desktop/course-2.jpg", alt="Наш замечательный курс")
-                    div(class="course__container")
-                        div(class="course__description")
-                            h3(class="course__title") Ашатанга-йога
-                            p(class="course__timetable timetable")
-                                span(class="timetable__item span-block") Пн, Ср, Пт – с 11:00 до 14:00 
-                                span(class="timetable__item span-block") Вт, Чт – с 19:00 до 21:00 
-                            p(class="course__teacher teacher")
-                                span(class="teacher__position span-block") Инструктор
-                                span(class="teacher__name span-block") Емельянова Полина
-                        a(class="course__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
-
-                article(class="directions__item course")
-                    h3(class="visually-hidden") Заголовок статьи
-                    picture(class="course__image-container")
-                        img(class="course__image" src="images/desktop/course-3.jpg", alt="Наш замечательный курс")
-                    div(class="course__container")
-                        div(class="course__description")
-                            h3(class="course__title") Кундалини-йога
-                            p(class="course__timetable timetable")
-                                span(class="timetable__item span-block") Пн, Ср, Пт – с 12:00 до 15:00 
-                                span(class="timetable__item span-block") Вт, Чт – с 18:00 до 21:00 
-                            p(class="course__teacher teacher")
-                                span(class="teacher__position span-block") Инструктор
-                                span(class="teacher__name span-block") Емельянова Полина
-                        a(class="course__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
+                +directionsArticle("Хатха-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Емельянова Полина", "#", "1")
+                +directionsArticle("Ашатанга-йога", "Пн, Ср, Пт – с 11:00 до 14:00", "Вт, Чт – с 19:00 до 21:00", "Емельянова Полина", "#", "2")
+                +directionsArticle("Кундалини-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Емельянова Полина", "#", "3")
 
                 button(class="directions__button button-more" id="add-courses") Смотреть больше
 
@@ -92,42 +51,6 @@ block content
                             +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "2 000 Р")
                                 block when
                                     p(class="subscription__time") Посещение <br> с 17:00 до 21:00
-
-        //- section(class="team section scroller__item")
-            h2(class="section__title") Наша команда
-
-            div(class="slider team-slider section__content")
-                button(class="slider__button slider__button--previous" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
-
-                div(class="slider-content")
-                    div(class="slider-track")
-                        div(class="slider-content__item slider-content__item--cloned")
-                        //- Контент последнего слайда
-
-                        div(class="slider-content__item ")
-                            div(class="slider-content__header member")
-                                picture(class="member__image-container")
-                                    img(class="member__image" src="images/desktop/team-1.jpg", alt="Наш замечательный преподаватель")
-                                div(class="member__description")    
-                                    div(class="member__container")
-                                        p(class="member__info")
-                                            span(class="member__position span-block") Инструктор
-                                            span(class="member__name span-block") Серёжа Попов
-                                        p(class="member__direction") Хатха-йога
-                                    div(class="member__socials")
-                                        a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-                                        a(class="member__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="member__icon member__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
-                            p(class="slider-content__experience") Опыт преподавания: 8 лет
-                            div(class="slider-content__info")
-                                p(class="slider-content__text") Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
-                                p(class="slider-content__text") Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
-                                p(class="slider-content__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
-                                p(class="slider-content__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
-
-                        div(class="slider-content__item slider-content__item--cloned")
-                        //- Контент первого слайда
-
-                button(class="slider__button slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
 
         section(class="team section scroller__item")
             h2(class="section__title") Наша команда

@@ -25,7 +25,10 @@
 .footer-top {
   @include for-size(desktop) {
     padding: 70px 0;
-    background: url("../images/phone/bg-action.jpg") center no-repeat;
+    // background: url("../images/phone/bg-action.jpg") center no-repeat;
+    background-image: image-set("../images/phone/bg-action.jpg" 1x, "../images/tablet/bg-action.jpg" 2x);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
   }
 
@@ -48,7 +51,10 @@
 
 .action {
   padding: 70px 35px;
-  background: url("../images/phone/bg-action.jpg") 22% 50% no-repeat;
+  // background: url("../images/phone/bg-action.jpg") 22% 50% no-repeat;
+  background-image: image-set("../images/phone/bg-action.jpg" 1x, "../images/tablet/bg-action.jpg" 2x);
+  background-repeat: no-repeat;
+  background-position: 22% 50%;
 
   @include for-size(desktop) {
     order: 2;

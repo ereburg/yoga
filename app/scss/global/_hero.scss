@@ -2,7 +2,10 @@
 
 .hero {
   padding: 100px 15px 70px;
-  background: url("../images/desktop/bg-hero.png") center no-repeat;
+  // background: url("../images/desktop/bg-hero.png") center no-repeat;
+  background-image: image-set("../images/phone/bg-hero.png" 1x, "../images/desktop/bg-hero.png" 2x);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   @include for-size(tablet-portrait) {
@@ -11,7 +14,8 @@
 
   @include for-size(desktop-big) {
     padding: 213px 15px 75px;
-    background: url("../images/desktop/bg-hero.png") 50% 0% no-repeat;
+    // background: url("../images/desktop/bg-hero.png") 50% 0% no-repeat;
+    background-position: 50% 0%;
     background-size: cover;
   }
 
