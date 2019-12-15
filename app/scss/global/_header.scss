@@ -5,6 +5,11 @@
   padding: 20px 0;
 }
 
+.header.scroll {
+  @include shadow;
+  background: $bg-regular;
+}
+
 .nav {
   @include flexbox(space-between);
   font-size: $fz-medium;
