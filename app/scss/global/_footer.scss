@@ -44,6 +44,16 @@
   }
 }
 
+.webp .footer-top {
+  @include for-size(desktop) {
+    background-image: image-set("../images/phone/bg-action.webp" 1x, "../images/tablet/bg-action.webp" 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
 .footer__form {
   max-width: 415px;
   margin: 0 auto;
@@ -59,6 +69,16 @@
   @include for-size(desktop) {
     order: 2;
     padding: 0;
+    background: none;
+  }
+}
+
+.webp .action {
+  background-image: image-set("../images/phone/bg-action.webp" 1x, "../images/tablet/bg-action.webp" 2x);
+  background-repeat: no-repeat;
+  background-position: 22% 50%;
+
+  @include for-size(desktop) {
     background: none;
   }
 }

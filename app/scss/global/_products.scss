@@ -1,16 +1,33 @@
 .products {
-  background: image-set("../images/phone/bg-prices.png" 1x, "../images/tablet/bg-prices.png" 2x) center no-repeat,
+  background: url("../images/phone/bg-prices.png") center no-repeat,
     image-set("../images/phone/subscription.png" 1x, "../images/phone/subscription-retina.png" 2x) center bottom -40px no-repeat;
   background-size: auto, 310px;
 
   @include for-size(tablet-portrait) {
-    background: image-set("../images/phone/bg-prices.png" 1x, "../images/tablet/bg-prices.png" 2x) center center -10% no-repeat,
+    background: url("../images/phone/bg-prices.png") center center -10% no-repeat,
       image-set("../images/phone/subscription.png" 1x, "../images/phone/subscription-retina.png" 2x) right bottom -40px no-repeat;
     background-size: cover, 310px;
   }
 
-  @include for-size(desktop-big) {
-    background: image-set("../images/phone/bg-prices.png" 1x, "../images/tablet/bg-prices.png" 2x) center center no-repeat, none;
+  @include for-size(desktop) {
+    background: url("../images/tablet/bg-prices.png") center center no-repeat, none;
+    background-size: cover;
+  }
+}
+
+.webp .products {
+  background: url("../images/phone/bg-prices.webp") center no-repeat,
+    image-set("../images/phone/subscription.png" 1x, "../images/phone/subscription-retina.png" 2x) center bottom -40px no-repeat;
+  background-size: auto, 310px;
+
+  @include for-size(tablet-portrait) {
+    background: url("../images/phone/bg-prices.webp") center center -10% no-repeat,
+      image-set("../images/phone/subscription.png" 1x, "../images/phone/subscription-retina.png" 2x) right bottom -40px no-repeat;
+    background-size: cover, 310px;
+  }
+
+  @include for-size(desktop) {
+    background: url("../images/tablet/bg-prices.webp") center center no-repeat, none;
     background-size: cover;
   }
 }
