@@ -12,23 +12,23 @@ block content
                 p(class="hero__text") Почувствуй расслабление в своем теле
                 h1(class="hero__title") Yoga
                 p(class="hero__action")
-                    a(class="hero__action-link" href="#action"): svg(class="hero__action-icon"): use(xlink:href="images/sprite.svg#sp-right")
+                    a(class="hero__action-link" href="#action" aria-label="Запишитесь на бесплатное пробное занятие"): svg(class="hero__action-icon"): use(xlink:href="images/sprite.svg#sp-right")
                     span(class="hero__action-text") Запишитесь на бесплатное пробное занятие
             div(class="hero__bottom")
                 ul(class="socials")
-                    li: a(href="#" target="_blank"): svg(class="socials__icon socials__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-                    li: a(href="#" target="_blank"): svg(class="socials__icon socials__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
-                    li: a(href="#" target="_blank"): svg(class="socials__icon socials__icon--fb"): use(xlink:href="images/sprite.svg#sp-fb")
+                    li: a(href="#" target="_blank" aria-label="Ссылка на наш профиль ВК"): svg(class="socials__icon socials__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+                    li: a(href="#" target="_blank" aria-label="Ссылка на наш профиль в Твиттере"): svg(class="socials__icon socials__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+                    li: a(href="#" target="_blank" aria-label="Ссылка на наш профиль ф Фейсбук"): svg(class="socials__icon socials__icon--fb"): use(xlink:href="images/sprite.svg#sp-fb")
                 p(class="hero__bottom-text") Санкт-Петербург
 
         section(class="directions section scroller__item")
             h2(class="section__title") Направления
             div(class="section__content directions__list")
                 +directionsArticle("Хатха-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Емельянова Полина", "#", "1")
-                +directionsArticle("Ашатанга-йога", "Пн, Ср, Пт – с 11:00 до 14:00", "Вт, Чт – с 19:00 до 21:00", "Емельянова Полина", "#", "2")
-                +directionsArticle("Кундалини-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Емельянова Полина", "#", "3")
+                +directionsArticle("Ашатанга-йога", "Пн, Ср, Пт – с 11:00 до 14:00", "Вт, Чт – с 19:00 до 21:00", "Анфилатов Илья", "#", "2")
+                +directionsArticle("Кундалини-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Тарасова Марина", "#", "3")
 
-                button(class="directions__button button-more" id="add-courses") Смотреть больше
+                button(class="directions__button button-more" id="add-courses" aria-label="Посмотреть все курсы") Смотреть больше
 
         section(class="products section scroller__item")
             h2(class="section__title") Абонементы
@@ -36,18 +36,18 @@ block content
             div(class="section__content products__content")
 
                 div(class="tablist-buttons")
-                    button(class="products__button tab-button products__button--active" type="button" data-tab="1") 1 месяц
-                    button(class="products__button tab-button" type="button" data-tab="2") 6 месяцев
-                    button(class="products__button tab-button" type="button" data-tab="3") 12 месяцев
+                    button(class="products__button tab-button products__button--active" type="button" data-tab="1" aria-label="Посмотреть абонементы сроком на 1 месяц") 1 месяц
+                    button(class="products__button tab-button" type="button" data-tab="2" aria-label="Посмотреть абонементы сроком на полгода") 6 месяцев
+                    button(class="products__button tab-button" type="button" data-tab="3" aria-label="Посмотреть абонементы сроком на год") 12 месяцев
 
                 div(class="tablist-contents")
                     div(class="tabcontent tabcontent--active" id="one-month" data-tab="1")
                         div(class="products__item")
-                            +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "1 300 Р")
+                            +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "1 300 ₽")
                                 block when
                                     p(class="subscription__time") Посещение <br> с 11:00 до 16:00
-                            +subscriptionItem("Безлимит", "Посещение не ограничено по времени", "2 800 Р")
-                            +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "2 000 Р")
+                            +subscriptionItem("Безлимит", "Посещение не ограничено по времени", "2 800 ₽")
+                            +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "2 000 ₽")
                                 block when
                                     p(class="subscription__time") Посещение <br> с 17:00 до 21:00
 
@@ -60,12 +60,12 @@ block content
                         +memberContentItem("Илья Анфилатов", "Флоу-йога", "2", "")
                         +memberContentItem("Марина Тарасова", "Йога в гамаках", "3", "")
                     div(class="slider__controls slider__controls--full-width")
-                        button(class="slider__button slider__button--team slider__button--prev" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                        button(class="slider__button slider__button--team slider__button--prev" type="button" aria-label="Следующий элемент"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
                         p(class="slider__counter slider-counter")
                             span(class="slider-counter__current") 1 
                             span / 
                             span(class="slider-counter__total") 9
-                        button(class="slider__button slider__button--team slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+                        button(class="slider__button slider__button--team slider__button--next" type="button" aria-label="Предыдущий элемент"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
             
                 div(class="member-description tablist-content")
                     +memberTabItem("Серёжа Попов", "Опыт преподавания: 8 лет", "tabcontent--active")
@@ -80,16 +80,16 @@ block content
             div(class="section__content")
                 div(class="slider")
                     div(class="slider__wrapper slider__wrapper--testimonials")
-                        +testimonialItem("Мария Савина", "16 мая 2018", "2018-05-16", "1", " slider__item--active")
-                        +testimonialItem("Татьяна Сугатова", "18 мая 2018", "2018-05-18", "1", "")
+                        +testimonialItem("Мария Сугатова", "16 мая 2018", "2018-05-16", "1", " slider__item--active")
+                        +testimonialItem("Тимур Шахов", "18 мая 2018", "2018-05-18", "2", "")
                         
                     div(class="slider__controls slider__controls--desktop-fw")
-                        button(class="slider__button slider__button--testimonials slider__button--prev" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
+                        button(class="slider__button slider__button--testimonials slider__button--prev" type="button" aria-label="Следующий"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
                         p(class="slider__counter slider-counter")
                             span(class="slider-counter__current") 1 
                             span / 
                             span(class="slider-counter__total") 9
-                        button(class="slider__button slider__button--testimonials slider__button--next" type="button"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
+                        button(class="slider__button slider__button--testimonials slider__button--next" type="button" aria-label="Предыдущий"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
 
             
     //- include modules/_footer

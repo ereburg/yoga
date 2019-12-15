@@ -14,7 +14,7 @@
 
   @include for-size(desktop-big) {
     @include bg-url("../images/desktop/bg-hero.png", $url2x: false, $webp1x: "../images/desktop/bg-hero.webp", $webp2x: false);
-    padding: 213px 15px 75px;
+    padding: 213px 15px 85px;
     // background: url("../images/desktop/bg-hero.png") 50% 0% no-repeat;
     background-repeat: no-repeat;
     background-position: 50% 0%;

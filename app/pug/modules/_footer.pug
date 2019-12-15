@@ -6,14 +6,14 @@ footer(class="footer")
         form(class="footer__form form-action" method="GET") 
           h3(class="form-action__title") Запишитесь на пробное занятие бесплатно
           p(class="form-action__item")
-            label(class="form-action__label" for="action-name")
-              input(class="form-action__input" id="action-name" type="text", name="user-name" placeholder="Ваше имя" required)
+            label(class="form-action__label")
+              input(class="form-action__input" id="action-name" type="text", name="user-name" placeholder="Ваше имя" required aria-label="Поле ввода имени пользователя")
               span(class="form-action__border")
           p(class="form-action__item")
-            label(class="form-action__label" for="action-phone")
-              input(class="form-action__input" id="action-phone" type="tel", name="user-phone" placeholder="Ваш телефон" required)
+            label(class="form-action__label")
+              input(class="form-action__input" id="action-phone" type="tel", name="user-phone" placeholder="Ваш телефон" required aria-label="Поле ввода телефона")
               span(class="form-action__border")
-          button(class="form-action__button" type="submit") Оставить заявку
+          button(class="form-action__button" type="submit" aria-label="Оставить заявку для занятий йогой") Оставить заявку
       section(class="footer__info")
         h2(class="visually-hidden") Контактная информация
         address(class="footer__address")
@@ -23,21 +23,21 @@ footer(class="footer")
                 span(class="info-list__text-small") Московский проспект, 22
             li(class="info-list__item")
               p(class="info-list__text") Телефон:
-                a(class="info-list__text-small" href="tel:+8 (812) 690-10-10") 8 (812) 690-10-10
+                a(class="info-list__text-small" href="tel:+8 (812) 690-10-10" aria-label="Наш номер телефона, позвоните нам") 8 (812) 690-10-10
             li(class="info-list__item")
               p(class="info-list__text") График работы:
                 span(class="info-list__text-small") Пн-Вс с 11:00 до 21:00
             li(class="info-list__item")
               p(class="info-list__text") Email:
-                a(class="info-list__text-small" href="mailto:yogaspb@gmail.com") yogaspb@gmail.com
+                a(class="info-list__text-small" href="mailto:yogaspb@gmail.com" aria-label="Напишите нам на почту") yogaspb@gmail.com
         ul(class="socials")
-          li: a(href="#" target="_blank") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
-          li: a(href="#" target="_blank") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
-          li: a(href="#" target="_blank") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
+          li: a(href="#" target="_blank" aria-label="Ссылка на профиль ВК") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
+          li: a(href="#" target="_blank" aria-label="Ссылка на профиль в Твиттер") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
+          li: a(href="#" target="_blank" aria-label="Ссылка на профиль в Фейсбук") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
   
   div(class="footer-bottom")
     div(class="footer-content__container")
       p(class="footer__copyright")
-        span(class="copyright-text") © 2018 Все права защищены
+        span(class="copyright-text") © 2019 Все права защищены
       p(class="footer__company")
         span(class="footer-bottom__text") Yogaspb.com

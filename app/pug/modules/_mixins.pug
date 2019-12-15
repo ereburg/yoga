@@ -3,7 +3,7 @@ mixin menuItem(link, name, current)
     if(current)
       span(class="menu__link menu__link--current")= name
     else
-      a(class="menu__link" href= link)= name
+      a(class="menu__link" href= link aria-label=`Переход на ${name}`)= name
 
 mixin subscriptionItem(how, when, price)
   div(class="subscription")
@@ -13,7 +13,7 @@ mixin subscriptionItem(how, when, price)
     else
       p(class="subscription__time")= when
     p(class="subscription__price")= price
-    button(class="subscription__button") Заказать абонемент
+    button(class="subscription__button" type="button" aria-label="Заказать абонемент") Заказать абонемент
 
 mixin memberTabItem(name, exp, active)
   div(class="member-description__item tabcontent " + `${active}`)
@@ -42,10 +42,10 @@ mixin memberContentItem(name, direction, image, active)
             p(class="member__name")= name
             p(class="member__direction")= direction
           div(class="member__socials")
-            a(class="member__social-link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="socials__icon socials__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-            a(class="member__social-link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="socials__icon socials__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+            a(class="member__social-link" href="#", target="_blank", rel="noopener noreferrer" aria-label="Посмотреть профиль преподавателя в ВК"): svg(class="socials__icon socials__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+            a(class="member__social-link" href="#", target="_blank", rel="noopener noreferrer" aria-label="Посмотреть профиль преподавателя в Твиттере"): svg(class="socials__icon socials__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
           p(class="member__link-container")
-            a(class="member__link" href="#") Смотреть
+            a(class="member__link" href="#" aria-label="Открыть страницу преподавателя") Смотреть
     if block
       block memContent
     else
@@ -83,8 +83,8 @@ mixin testimonialItem(name, date, datebin, image, active)
             p(class="author__name")= name
             time(class="author__date span-block" datetime=datebin)= date
           div(class="author__socials")
-            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
-            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
+            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer" aria-label="Посмотреть профиль пользователя в ВК"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
+            a(class="author__link" href="#", target="_blank", rel="noopener noreferrer" aria-label="Посмотреть профиль пользователя в Твиттере"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
 
 mixin directionsArticle(title, timeOne, timeTwo, teacher, link, course)
   article(class="directions__item course")
@@ -106,4 +106,4 @@ mixin directionsArticle(title, timeOne, timeTwo, teacher, link, course)
         p(class="course__teacher teacher")
           span(class="teacher__position span-block") Инструктор
           span(class="teacher__name span-block")= teacher
-      a(class="course__link" href=link, target="_blank", rel="noopener noreferrer"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
+      a(class="course__link" href=link, target="_blank", rel="noopener noreferrer" aria-label="Нажмите, чтобы просмотреть курс"): svg(class="course__icon"): use(xlink:href="images/sprite.svg#sp-right")
