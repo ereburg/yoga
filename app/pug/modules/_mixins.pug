@@ -15,8 +15,8 @@ mixin subscriptionItem(how, when, price)
     p(class="subscription__price")= price
     button(class="subscription__button" type="button" aria-label="Заказать абонемент") Заказать абонемент
 
-mixin memberTabItem(name, exp, active)
-  div(class="member-description__item tabcontent " + `${active}`)
+mixin memberTabContent(name, exp, active, dataTab, idValue)
+  div(class="member-description__item tabcontent--members " + `${active}` id= idValue data-tab= dataTab)
     h3(class="member-description__name")= name
     p(class="member-description__experience")= exp
     if block
@@ -25,8 +25,8 @@ mixin memberTabItem(name, exp, active)
       p(class="member-description__text")= text
       
 
-mixin memberContentItem(name, direction, image, active)
-  div(class="member tabbutton slider__item" + `${active}`)
+mixin memberTabButton(name, direction, image, active, dataTab)
+  div(class="member tabbutton--members slider__item" + `${active}` data-tab= dataTab)
     div(class="member__container")
       picture(class="member__image-container")
         source(media="(max-width: 600px)", srcset=`images/phone/team-${image}.webp`, type="image/webp")

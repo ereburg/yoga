@@ -1,6 +1,12 @@
 header(class="header")
   div(class="container")
     nav(class="nav")
+      button(class="nav__button button-menu" type="button" aria-label="Меню")
+        span(class="menu-group")
+          span(class="button-menu__item")
+          span(class="button-menu__item")
+          span(class="button-menu__item")
+        span(class="button-menu__text") Меню
       div(class="menu-background")
       ul(class="menu")
         +menuItem("#hero", "Главная")
@@ -14,11 +20,5 @@ header(class="header")
             li: a(href="vk.com" target="_blank" aria-label="Ссылка на профиль ВК") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
             li: a(href="twitter.com" target="_blank" aria-label="Ссылка на профиль В Твиттере") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
             li: a(href="facebook.com" target="_blank" aria-label="Ссылка на профиль в Фейсбуке") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
-      button(class="nav__button button-menu" type="button" aria-label="Меню")
-        span(class="menu-group")
-          span(class="button-menu__item")
-          span(class="button-menu__item")
-          span(class="button-menu__item")
-        span(class="button-menu__text") Меню
       p(class="nav__info")
         a(href="tel:+88126901010" aria-label="Остались вопросы? Позвоните нам по этому номеру") 8 (812) 690-10-10

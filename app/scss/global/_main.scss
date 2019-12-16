@@ -26,6 +26,8 @@
 .section {
   @include flexbox(center);
   flex-direction: column;
+  margin-top: -70px;
+  padding-top: 70px;
   padding-bottom: 70px;
 
   @include for-size(tablet-portrait) {
@@ -34,12 +36,10 @@
 
   @include for-size(desktop) {
     padding-top: 70px;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
   }
 
   @include for-size(desktop-big) {
-    margin-top: -70px;
-    padding-top: 70px;
     padding-bottom: 150px;
   }
 }

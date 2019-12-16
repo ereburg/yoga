@@ -36,12 +36,12 @@ block content
             div(class="section__content products__content")
 
                 div(class="tablist-buttons")
-                    button(class="products__button tab-button products__button--active" type="button" data-tab="1" aria-label="Посмотреть абонементы сроком на 1 месяц") 1 месяц
-                    button(class="products__button tab-button" type="button" data-tab="2" aria-label="Посмотреть абонементы сроком на полгода") 6 месяцев
-                    button(class="products__button tab-button" type="button" data-tab="3" aria-label="Посмотреть абонементы сроком на год") 12 месяцев
+                    button(class="products__button tabbutton--products active" type="button" data-tab="p1" aria-label="Посмотреть абонементы сроком на 1 месяц") 1 месяц
+                    button(class="products__button tabbutton--products" type="button" data-tab="p2" aria-label="Посмотреть абонементы сроком на полгода") 6 месяцев
+                    button(class="products__button tabbutton--products" type="button" data-tab="p3" aria-label="Посмотреть абонементы сроком на год") 12 месяцев
 
                 div(class="tablist-contents")
-                    div(class="tabcontent tabcontent--active" id="one-month" data-tab="1")
+                    div(class="tabcontent--products active" id="one-month" data-tab="p1")
                         div(class="products__item")
                             +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "1 300 ₽")
                                 block when
@@ -50,15 +50,35 @@ block content
                             +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "2 000 ₽")
                                 block when
                                     p(class="subscription__time") Посещение <br> с 17:00 до 21:00
+                    
+                    div(class="tabcontent--products" id="six-month" data-tab="p2")
+                        div(class="products__item")
+                            +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "6 500 ₽")
+                                block when
+                                    p(class="subscription__time") Посещение <br> с 11:00 до 16:00
+                            +subscriptionItem("Безлимит", "Посещение не ограничено по времени", "12 800 ₽")
+                            +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "11 500 ₽")
+                                block when
+                                    p(class="subscription__time") Посещение <br> с 17:00 до 21:00
+                    
+                    div(class="tabcontent--products" id="twelwe-month" data-tab="p3")
+                        div(class="products__item")
+                            +subscriptionItem("утро", "Посещение с 11:00 до 16:00", "13 000 ₽")
+                                block when
+                                    p(class="subscription__time") Посещение <br> с 11:00 до 16:00
+                            +subscriptionItem("Безлимит", "Посещение не ограничено по времени", "28 000 ₽")
+                            +subscriptionItem("Вечер", "Посещение с 17:00 до 21:00", "20 000 ₽")
+                                block when
+                                    p(class="subscription__time") Посещение <br> с 17:00 до 21:00
 
         section(class="team section scroller__item" id="team")
             h2(class="section__title") Наша команда
             div(class="section__content team__content")
                 div(class="slider")
                     div(class="slider__wrapper slider__wrapper--team tablist-button")
-                        +memberContentItem("Серёжа Попов", "Хатха-йога", "1", " slider__item--active")
-                        +memberContentItem("Илья Анфилатов", "Флоу-йога", "2", "")
-                        +memberContentItem("Марина Тарасова", "Йога в гамаках", "3", "")
+                        +memberTabButton("Серёжа Попов", "Хатха-йога", "1", " active", "m1")
+                        +memberTabButton("Илья Анфилатов", "Флоу-йога", "2", "", "m2")
+                        +memberTabButton("Марина Тарасова", "Йога в гамаках", "3", "", "m3")
                     div(class="slider__controls slider__controls--full-width")
                         button(class="slider__button slider__button--team slider__button--prev" type="button" aria-label="Следующий элемент"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
                         p(class="slider__counter slider-counter")
@@ -68,19 +88,33 @@ block content
                         button(class="slider__button slider__button--team slider__button--next" type="button" aria-label="Предыдущий элемент"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
             
                 div(class="member-description tablist-content")
-                    +memberTabItem("Серёжа Попов", "Опыт преподавания: 8 лет", "tabcontent--active")
+                    +memberTabContent("Серёжа Попов", "Опыт преподавания: 8 лет", "active", "m1", "member-one")
                         block memDescr
                             p(class="member-description__text") Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                            p(class="member-description__text") Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
+                            p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+                            p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+                    
+                    +memberTabContent("Илья Анфилатов", "Опыт преподавания: 5 лет", "", "m2", "member-two")
+                        block memDescr
+                            p(class="member-description__text") Образование и опыт работы: Практикует с 2014 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                            p(class="member-description__text") Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
+                            p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+                            p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+                    
+                    +memberTabContent("Марина Тарасова", "Опыт преподавания: 11 лет", "", "m3", "member-three")
+                        block memDescr
+                            p(class="member-description__text") Образование и опыт работы: Практикует с 2008 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
                             p(class="member-description__text") Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко.
                             p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
                             p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
-
+                    
         section(class="testimonials section scroller__item" id="testimonials")
             h2(class="section__title") Отзывы
             div(class="section__content")
                 div(class="slider")
                     div(class="slider__wrapper slider__wrapper--testimonials")                        
-                        +testimonialItem("Мария Сугатова", "18 декабря 2019", "2018-11-19", "1", " slider__item--active")
+                        +testimonialItem("Мария Сугатова", "18 декабря 2019", "2018-11-19", "1", " active")
                         +testimonialItem("Артур Чапарян ", "16 декабря 2019", "2018-11-16", "2", "")
                         
                     div(class="slider__controls slider__controls--desktop-fw")

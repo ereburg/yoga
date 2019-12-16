@@ -191,10 +191,11 @@
 
 // Tablist text content
 
-.tabcontent {
+.tabcontent--members,
+.tabcontent--products {
   display: none;
 
-  &--active {
+  &.active {
     display: block;
   }
 }
@@ -275,12 +276,11 @@
   @include for-size(phone) {
     display: none;
 
-    &--active {
+    &.active {
       display: block;
     }
   }
 }
-
 
 .slider__controls {
   position: absolute;
