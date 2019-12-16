@@ -1,18 +1,20 @@
 header(class="header")
   div(class="container")
     nav(class="nav")
+      div(class="menu-background")
       ul(class="menu")
-        +menuItem("#home", "Главная")
-        +menuItem("#home", "Направления")
-        +menuItem("#home", "Абонементы")
-        +menuItem("#home", "О нас")
-        +menuItem("#home", "Записаться")
-        div(class="mobile-socials")
+        +menuItem("#hero", "Главная")
+        +menuItem("#directions", "Направления")
+        +menuItem("#products", "Абонементы")
+        +menuItem("#team", "О нас")
+        +menuItem("#testimonials", "Отзывы")
+        +menuItem("#action", "Записаться")
+        div(class="menu__item mobile-socials")
           ul(class="socials")
-            li: a(href="#" target="_blank" aria-label="Ссылка на профиль ВК") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
-            li: a(href="#" target="_blank" aria-label="Ссылка на профиль В Твиттере") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
-            li: a(href="#" target="_blank" aria-label="Ссылка на профиль в Фейсбуке") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
-      button(class="nav__button button button-menu" type="button" aria-label="Меню")
+            li: a(href="vk.com" target="_blank" aria-label="Ссылка на профиль ВК") <svg class="socials__icon socials__icon--vk"><use xlink:href="images/sprite.svg#sp-vk"></use></svg>
+            li: a(href="twitter.com" target="_blank" aria-label="Ссылка на профиль В Твиттере") <svg class="socials__icon socials__icon--tw"><use xlink:href="images/sprite.svg#sp-tw"></use></svg>
+            li: a(href="facebook.com" target="_blank" aria-label="Ссылка на профиль в Фейсбуке") <svg class="socials__icon socials__icon--fb"><use xlink:href="images/sprite.svg#sp-fb"></use></svg>
+      button(class="nav__button button-menu" type="button" aria-label="Меню")
         span(class="menu-group")
           span(class="button-menu__item")
           span(class="button-menu__item")

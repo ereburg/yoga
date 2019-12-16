@@ -27,7 +27,7 @@
   }
 
   @include for-size(desktop) {
-    background: url("../images/tablet/bg-prices.webp") center center no-repeat, none;
+    background: url("../images/tablet/bg-prices.webp") center 15px no-repeat, none;
     background-size: cover;
   }
 }

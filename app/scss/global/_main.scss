@@ -33,6 +33,13 @@
   }
 
   @include for-size(desktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  @include for-size(desktop-big) {
+    margin-top: -70px;
+    padding-top: 70px;
     padding-bottom: 150px;
   }
 }

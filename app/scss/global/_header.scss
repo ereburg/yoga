@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 25;
+  z-index: 40;
   padding: 20px 0;
 }
 
@@ -15,10 +15,98 @@
   font-size: $fz-medium;
 }
 
+// Меню
+
+.page.menu--open {
+  overflow: hidden;
+}
+
 .menu {
-  @include flexbox;
+  @include shadow;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: minmax(25px, max-content);
+  gap: 50px;
+  justify-content: center;
+  justify-items: center;
+  padding: 15vh 0 25px;
+  background: $bg-regular;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include for-size(tablet-portrait) {
+    padding-top: 15vh;
+  }
+
+  @include for-size(desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(25px, max-content));
+    gap: 25px;
+    padding: 17.5px 0;
+
+    .mobile-socials {
+      display: none;
+    }
+  }
+
+  @include for-size(desktop-big) {
+    gap: 50px;
+  }
+}
+
+.menu-background {
   display: none;
-  flex-direction: column;
+
+  &.active {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    display: block;
+    height: calc(100vh - 53px);
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.menu__item {
+  &:last-child {
+    position: relative;
+    margin-top: 50px;
+    // padding-top: 25px;
+
+    &::before {
+      @include pseudo;
+      position: absolute;
+      top: -25px;
+      left: -50%;
+      width: 200%;
+      height: 1px;
+      background: $bg-dark;
+      border-radius: 50%;
+
+      @include for-size(tablet-portrait) {
+        left: -150%;
+        width: 400%;
+      }
+    }
+
+    // & .socials__icon {
+    //   color: $color-accent;
+    // }
+  }
 }
 
 .button-menu,
@@ -28,6 +116,17 @@
 
 .button-menu {
   @include flexbox(center);
+  position: relative;
+  z-index: 50;
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
 }
 
 .button-menu__item {
@@ -71,5 +170,44 @@
 
   li:not(:last-child) {
     margin-right: 25px;
+  }
+}
+
+.nav__info {
+  position: relative;
+  z-index: 50;
+}
+
+.menu__link {
+  &.active {
+    position: relative;
+    color: $color-accent;
+
+
+    &::before,
+    &::after {
+      @include pseudo;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $color-accent;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: -15px;
+
+      @include for-size(desktop) {
+        top: -5px;
+      }
+    }
+
+    &::after {
+      bottom: -15px;
+
+      @include for-size(desktop) {
+        bottom: -5px;
+      }
+    }
   }
 }

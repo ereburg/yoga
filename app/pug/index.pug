@@ -6,7 +6,7 @@ block variables
 
 block content
     main(class="main scroller")
-        section(class="hero scroller__item")
+        section(class="hero scroller__item" id="hero")
             h2(class="visually-hidden") Yoga - почувствуй расслабление в своем теле
             div(class="hero__content")
                 p(class="hero__text") Почувствуй расслабление в своем теле
@@ -21,7 +21,7 @@ block content
                     li: a(href="#" target="_blank" aria-label="Ссылка на наш профиль ф Фейсбук"): svg(class="socials__icon socials__icon--fb"): use(xlink:href="images/sprite.svg#sp-fb")
                 p(class="hero__bottom-text") Санкт-Петербург
 
-        section(class="directions section scroller__item")
+        section(class="directions section scroller__item" id="directions")
             h2(class="section__title") Направления
             div(class="section__content directions__list")
                 +directionsArticle("Хатха-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Емельянова Полина", "#", "1")
@@ -30,7 +30,7 @@ block content
 
                 button(class="directions__button button-more" id="add-courses" aria-label="Посмотреть все курсы") Смотреть больше
 
-        section(class="products section scroller__item")
+        section(class="products section scroller__item" id="products")
             h2(class="section__title") Абонементы
 
             div(class="section__content products__content")
@@ -51,7 +51,7 @@ block content
                                 block when
                                     p(class="subscription__time") Посещение <br> с 17:00 до 21:00
 
-        section(class="team section scroller__item")
+        section(class="team section scroller__item" id="team")
             h2(class="section__title") Наша команда
             div(class="section__content team__content")
                 div(class="slider")
@@ -75,13 +75,13 @@ block content
                             p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
                             p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
 
-        section(class="testimonials section scroller__item")
+        section(class="testimonials section scroller__item" id="testimonials")
             h2(class="section__title") Отзывы
             div(class="section__content")
                 div(class="slider")
-                    div(class="slider__wrapper slider__wrapper--testimonials")
-                        +testimonialItem("Мария Сугатова", "16 мая 2018", "2018-05-16", "1", " slider__item--active")
-                        +testimonialItem("Тимур Шахов", "18 мая 2018", "2018-05-18", "2", "")
+                    div(class="slider__wrapper slider__wrapper--testimonials")                        
+                        +testimonialItem("Мария Сугатова", "18 декабря 2019", "2018-11-19", "1", " slider__item--active")
+                        +testimonialItem("Артур Чапарян ", "16 декабря 2019", "2018-11-16", "2", "")
                         
                     div(class="slider__controls slider__controls--desktop-fw")
                         button(class="slider__button slider__button--testimonials slider__button--prev" type="button" aria-label="Следующий"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-left")
