@@ -42,20 +42,6 @@
   }
 }
 
-.tablist-buttons {
-  @include flexbox(space-between);
-  margin-bottom: 35px;
-
-  @include for-size(tablet-portrait) {
-    justify-content: center;
-    margin-bottom: 45px;
-  }
-
-  @include for-size(desktop-big) {
-    margin-bottom: 50px;
-  }
-}
-
 .products__button {
   position: relative;
   color: $color-accent;

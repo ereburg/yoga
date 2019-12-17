@@ -173,7 +173,6 @@
   }
 }
 
-
 .member__link {
   position: relative;
   display: block;
@@ -186,20 +185,8 @@
     @include pseudo;
   }
 }
-// Tablist buttons
-
 
 // Tablist text content
-
-.tabcontent--members,
-.tabcontent--products {
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
 .member-description {
   display: none;
 
@@ -263,173 +250,5 @@
 
   @include for-size(tablet-portrait) {
     display: none;
-  }
-}
-
-// Slider
-
-.slider {
-  position: relative;
-}
-
-.slider__item {
-  @include for-size(phone) {
-    display: none;
-
-    &.active {
-      display: block;
-    }
-  }
-}
-
-.slider__controls {
-  position: absolute;
-  right: 0;
-  bottom: -45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include for-size(tablet-portrait) {
-    bottom: -45px;
-  }
-
-  @include for-size(desktop) {
-    bottom: -75px;
-  }
-
-  &--desktop-fw {
-    right: 50%;
-    transform: translateX(50%);
-
-    @include for-size(desktop) {
-      bottom: 50%;
-      justify-content: space-between;
-      width: 105%;
-
-      .slider__button {
-        transform: translateY(50%);
-
-        &--prev {
-          background: $color-regular;
-
-          .slider__icon {
-            fill: $color-white;
-          }
-        }
-
-        @include shadow;
-      }
-
-      .slider__counter {
-        display: none;
-      }
-    }
-  }
-
-  &--full-width {
-    top: 25px;
-    right: -($mobileWidth / 2);
-    left: -($mobileWidth / 2);
-    // width: 100% + $mobileWidth;
-    justify-content: space-between;
-    max-height: 30px;
-
-    .slider__counter {
-      display: none;
-
-      @include for-size(tablet-portrait) {
-        display: block;
-      }
-    }
-
-    @include for-size(tablet-portrait) {
-      top: unset;
-      right: 0;
-      left: unset;
-      justify-content: center;
-      width: unset;
-    }
-  }
-}
-
-.slider__icon {
-  max-width: 10px;
-  max-height: 13px;
-  fill: $color-regular;
-
-  @include for-size(desktop) {
-    max-width: 13px;
-    max-height: 16px;
-  }
-}
-
-.slider__button {
-  // position: relative;
-  // top: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 16px;
-  // padding: 8px 2px;
-  border: 1px solid $color-regular;
-
-  &--team {
-    // position: absolute;
-    // top: 0;
-    width: 16px;
-    height: 30px;
-
-    @include for-size(tablet-portrait) {
-      position: relative;
-      width: 30px;
-      height: 20px;
-    }
-
-    @include for-size(desktop) {
-      width: 45px;
-      height: 30px;
-    }
-  }
-
-  &--next {
-    // right: 0;
-    background: $color-regular;
-
-    .slider__icon {
-      fill: $color-white;
-    }
-  }
-
-  .slider__icon {
-    display: block;
-  }
-
-  @include for-size(tablet-portrait) {
-    width: 30px;
-    height: 20px;
-  }
-
-  @include for-size(desktop) {
-    width: 45px;
-    height: 30px;
-  }
-}
-
-.slider__counter {
-  margin: 0 10px;
-  font-size: $fz-team-text-lg;
-
-  @include for-size(desktop) {
-    font-size: $fz-team-name-md;
-  }
-}
-
-.slider-counter__total {
-  font-size: $fz-team-text-sm;
-
-  @include for-size(desktop) {
-    font-size: $fz-team-text-lg;
   }
 }

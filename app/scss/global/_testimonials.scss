@@ -6,22 +6,6 @@
   }
 }
 
-.slider__wrapper--testimonials {
-  display: grid;
-  grid-template-columns: minmax(200px, 360px);
-
-  @include for-size(tablet-portrait) {
-    display: grid;
-    grid-template-columns: minmax(360px, 450px);
-    gap: 15px;
-  }
-
-  @include for-size(desktop) {
-    grid-template-columns: repeat(2, minmax(360px, 450px));
-    gap: 20px;
-  }
-}
-
 .testimonial__container {
   @include shadow;
   padding: 10px 15px 30px;
