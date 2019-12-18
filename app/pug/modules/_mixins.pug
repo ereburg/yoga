@@ -86,8 +86,8 @@ mixin testimonialItem(name, date, datebin, image, active)
             a(class="author__link" href="#", target="_blank", rel="noopener noreferrer" aria-label="Посмотреть профиль пользователя в ВК"): svg(class="author__icon author__icon--vk"): use(xlink:href="images/sprite.svg#sp-vk")
             a(class="author__link" href="#", target="_blank", rel="noopener noreferrer" aria-label="Посмотреть профиль пользователя в Твиттере"): svg(class="author__icon author__icon--tw"): use(xlink:href="images/sprite.svg#sp-tw")
 
-mixin directionsArticle(title, timeOne, timeTwo, teacher, link, course, isActive)
-  article(class="directions__item course" + ` ${isActive}`)
+mixin directionsArticle(title, timeOne, timeTwo, teacher, link, course)
+  article(class="directions__item course")
     h3(class="visually-hidden")= `Курсы по ${title}`
     picture(class="course__image-container")
       source(media="(max-width: 600px)", srcset=`images/phone/direction-${course}.webp`, type="image/webp")

@@ -118,19 +118,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// Показать еще курсы
+	const courseContainer = document.querySelector('.directions__list');
 	const buttonLoadMore = document.querySelector('.button-more');
 	const courseItem = document.querySelectorAll('.course');
 
+	const courseItemCopyOne = courseItem[0].cloneNode(true);
+	const courseItemCopyTwo = courseItem[1].cloneNode(true);
+	const courseItemCopyThree = courseItem[2].cloneNode(true);
+	const courseItemCopyFour = courseItem[0].cloneNode(true);
+
 	buttonLoadMore.addEventListener('click', e => {
-		buttonLoadMore.style.display = "none";
-		courseItem.forEach((trigger) => {
-			if(trigger.classList.contains('active')) {
-				return;
-			} else {
-				trigger.classList.add('active');
-			}
-			
-		});
+		buttonLoadMore.remove();
+		courseContainer.append(courseItemCopyOne);
+		courseContainer.append(courseItemCopyTwo);
+		courseContainer.append(courseItemCopyFour);
+		courseContainer.append(courseItemCopyThree);
+		courseContainer.append(courseItemCopyOne);
 	});
 
 });
