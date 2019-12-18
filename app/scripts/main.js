@@ -117,4 +117,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+	// Показать еще курсы
+	const buttonLoadMore = document.querySelector('.button-more');
+	const courseItem = document.querySelectorAll('.course');
+
+	buttonLoadMore.addEventListener('click', e => {
+		buttonLoadMore.style.display = "none";
+		courseItem.forEach((trigger) => {
+			if(trigger.classList.contains('active')) {
+				return;
+			} else {
+				trigger.classList.add('active');
+			}
+			
+		});
+	});
+
 });

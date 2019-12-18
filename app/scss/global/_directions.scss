@@ -42,40 +42,27 @@
 .directions__list {
   @include for-size(medium) {
     display: grid;
+    grid-template-rows: repeat(auto-fit, 62px);
     grid-template-columns: 250px 360px;
     gap: 18px 22px;
-    // grid-template-rows: repeat(auto-fill, max-content);
     justify-content: center;
     padding: 0;
 
-    // &::before {
-    //   @include pseudo;
-    //   position: absolute;
-    //   top: -25%;
-    //   left: -25%;
-    //   // max-width: 1250px;
-    //   width: 150%;
-    //   max-height: 720px;
-    //   height: 150%;
-    //   margin: 0 auto;
-    //   background: image-set("../images/phone/bg-courses.png" 1x, "../images/tablet/bg-courses.png" 2x) center no-repeat;
-    //   background-size: contain;
-    // }
-
     & :first-child,
     & :nth-child(5n) {
-      grid-row: span 3;
+      grid-row: span 5;
     }
 
-    & :not(:first-child) {
+    & :not(:first-child):not(:nth-child(5n)) {
       flex-direction: row;
+      grid-row: span 2;
     }
 
-    .course {
+    .course.active {
       margin-bottom: 0;
     }
 
-    .directions__item:not(:first-child) {
+    .directions__item:not(:first-child):not(:nth-child(5n)) {
       .course__image {
         max-width: 150px;
       }
@@ -109,6 +96,10 @@
       padding-left: 20px;
       font-size: $fz-small-md;
     }
+
+    .directions__button {
+      grid-row: span 1 !important;
+    }
   }
 
   @include for-size(desktop-big) {
@@ -116,14 +107,15 @@
     gap: 28px 34px;
 
     // стилизация первого курса
-    & :first-child {
+    & :first-child,
+    & :nth-child(5n) {
       .course__image {
         max-width: 100%;
       }
     }
 
     // стилизация всех остальных курсов
-    .directions__item:not(:first-child) {
+    .directions__item:not(:first-child):not(:nth-child(5n)) {
       .course__image {
         max-width: 220px;
       }
@@ -157,6 +149,10 @@
 }
 
 .course {
+  display: none;
+}
+
+.course.active {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
