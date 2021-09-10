@@ -1,4 +1,4 @@
-# Yoga !Work in progress!
+# Yoga 
 This is the main page of yoga-center in Saint-Petersburg. Clean and modern landing.
 This is a test project. It is based on my own gulp template for HTML development.
 

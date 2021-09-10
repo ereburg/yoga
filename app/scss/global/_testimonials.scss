@@ -90,3 +90,30 @@
   margin-right: 10px;
 }
 
+// NEW swiper
+
+.testimonials__slider {
+  max-width: 100vw;
+  max-height: 700px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: #fff;
+}
+
+
+.swiper-pagination--testimonials {
+  @include for-size(desktop) {
+    display: none;
+  }
+}

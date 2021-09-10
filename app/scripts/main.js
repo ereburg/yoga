@@ -136,4 +136,35 @@ document.addEventListener("DOMContentLoaded", () => {
 		courseContainer.append(courseItemCopyOne);
 	});
 
+	// Слайдер
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 10,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		mousewheel: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			600: {
+				direction: 'vertical',
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 20,
+			},
+			980: {
+				direction: 'row',
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 20,
+			},
+		}
+	});
 });

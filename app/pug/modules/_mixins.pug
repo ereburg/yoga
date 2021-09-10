@@ -56,8 +56,8 @@ mixin memberTabButton(name, direction, image, active, dataTab)
         p(class="member-description__text") Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
         p(class="member-description__text") Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
 
-mixin testimonialItem(name, date, datebin, image, active)
-  div(class="testimonial-item slider__item" + `${active}`)
+mixin testimonialItem(name, date, datebin, image)
+  div(class="testimonial-item slider__item")
     div(class="testimonial__container")
       div(class="testimonial__quotes-container")
         span(class="testimonial__quotes span-block"): svg(class="testimonial__icon"): use(xlink:href="images/sprite.svg#sp-qoutes")

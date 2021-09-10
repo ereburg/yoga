@@ -32,6 +32,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -57,5 +58,8 @@
   "browserslist": [
     "last 4 version",
     "> 2%"
-  ]
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

@@ -27,10 +27,6 @@ block content
                 +directionsArticle("Хатха-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Емельянова Полина", "#", "1", "active")
                 +directionsArticle("Ашатанга-йога", "Пн, Ср, Пт – с 11:00 до 14:00", "Вт, Чт – с 19:00 до 21:00", "Анфилатов Илья", "#", "2", "active")
                 +directionsArticle("Кундалини-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Тарасова Марина", "#", "3", "active")
-                //- +directionsArticle("Хатха-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Сытько Виктор", "#", "1", "")
-                //- +directionsArticle("Ашатанга-йога", "Пн, Ср, Пт – с 11:00 до 14:00", "Вт, Чт – с 19:00 до 21:00", "Дроздов Николай", "#", "2", "")
-                //- +directionsArticle("Кундалини-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Анна Мэй", "#", "3", "")
-                //- +directionsArticle("Кундалини-йога", "Пн, Ср, Пт – с 12:00 до 15:00", "Вт, Чт – с 18:00 до 21:00", "Утренняя Надежда", "#", "1", "")
 
                 button(class="directions__button button-more" id="add-courses" aria-label="Посмотреть все курсы") Смотреть больше
 
@@ -130,4 +126,33 @@ block content
                         button(class="slider__button slider__button--testimonials slider__button--next" type="button" aria-label="Предыдущий"): svg(class="slider__icon"): use(xlink:href="images/sprite.svg#sp-right")
 
             
+        section(class="testimonials section scroller__item" id="testimonials")
+            h2(class="section__title") Отзывы
+            div(class="section__content testimonials__slider")
+                div(class="swiper-container")
+                    div(class="swiper-wrapper")
+                        div(class="swiper-slide")
+                            +testimonialItem("Мария Сугатова", "18 декабря 2019", "2018-12-19", "1")
+                        div(class="swiper-slide")
+                            +testimonialItem("Артур Чапарян ", "16 декабря 2019", "2018-12-16", "2")
+                        div(class="swiper-slide")
+                            +testimonialItem("Дарья Дмитриева", "14 декабря 2019", "2018-12-14", "1")
+                        div(class="swiper-slide")
+                            +testimonialItem("Марина Цветаева", "13 декабря 2019", "2018-12-13", "1")
+                        div(class="swiper-slide")
+                            +testimonialItem("Юлия Гацура", "8 декабря 2019", "2018-12-08", "1")
+                        div(class="swiper-slide")
+                            +testimonialItem("Мария Симакова", "5 декабря 2019", "2018-12-05", "1")
+                        div(class="swiper-slide")
+                            +testimonialItem("Денис Честный ", "2 декабря 2019", "2018-12-02", "2")
+                        div(class="swiper-slide") 
+                            +testimonialItem("Король Артур ", "26 ноября 2019", "2018-11-26", "2")
+                        div(class="swiper-slide") 
+                            +testimonialItem("Джон Шепард ", "16 ноября 2019", "2018-11-16", "2")
+                        div(class="swiper-slide") 
+                            +testimonialItem("Анджелина Джоли", "14 ноября 2019", "2018-11-14", "1")
+                    div(class="swiper-pagination swiper-pagination--testimonials")
+                    div(class="swiper-button-next")
+                    div(class="swiper-button-prev")
+
     //- include modules/_footer

@@ -5,15 +5,15 @@
   // overflow: hidden;
 }
 
-.slider__item {
-  @include for-size(phone) {
-    display: none;
+// .slider__item {
+//   @include for-size(phone) {
+//     display: none;
 
-    &.active {
-      display: block;
-    }
-  }
-}
+//     &.active {
+//       display: block;
+//     }
+//   }
+// }
 
 .slider__controls {
   position: absolute;
